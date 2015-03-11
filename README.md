@@ -2,5 +2,5 @@
 
 cs 422 final project
 
-Peter Hanula
+Peter Hanula,
 Jacob Hsiao
