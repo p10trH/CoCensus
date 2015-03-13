@@ -1,6 +1,15 @@
-// setup globals, add fonts, objects, initialize
+// This file will be used to set up containers, objects, buttons, tabs, fonts, etc.
+// This code will be called only once, in the beginning of running the program,
+// to initialize the user interface. Most globals are initialized here as well.
+
+// Imports
+
+import controlP5.*;
 
 // Globals
+
+// ControlP5
+ControlP5 cp5; // ControlP5 object
 
 // Colors
 color tabBackground         = color(191, 48, 48);  // Red, no option picked
@@ -8,17 +17,16 @@ color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(48, 191, 48);  // Green, option picked
 
 // Sizes
-int tabWidth      = 382;
-int tabWidthSmall = 191;
+int tabWidth      = 380;
+int tabWidthSmall = 190;
 int tabHeight     = 100;
 
-int tabFontSize      = 36;
-int tabFontSizeSmall = 24;
+int tabFontSize      = 40;
+int tabFontSizeSmall = 25;
 
-
-// Fonts, Note: Fonts need to be loaded within functions
+// Fonts 
+// Note: Fonts need to be loaded within functions
 PFont tabFont;
-
 
 
 
@@ -27,10 +35,13 @@ PFont tabFont;
 // to finish setup.
 public void initialize() {
   
+  cp5 = new ControlP5(this);
+  
   size(1920, 1080);
   noStroke();
   background(color(255));
  
+ // -------------------------- //
   
   tabs();
   
@@ -134,6 +145,8 @@ public void tabs() {
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ;
      
+     
+  cp5.window().setPositionOfTabs(0,0);
      
   
 }

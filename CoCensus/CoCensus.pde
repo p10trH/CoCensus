@@ -1,10 +1,9 @@
-import controlP5.*;
+// Think of this as main. This file contains the functions "setup()"
+// and "draw()". These functions will call the public methods in the other
+// files. This reduces clutter and is easier to work with it.
 
-ControlP5 cp5;
 
 void setup() {
-  
-  cp5 = new ControlP5(this);
   
   initialize();
   
