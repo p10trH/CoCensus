@@ -24,9 +24,14 @@ int tabHeight     = 100;
 int tabFontSize      = 40;
 int tabFontSizeSmall = 25;
 
+// Positions
+int tabPositionY = 900;
+
 // Fonts 
 // Note: Fonts need to be loaded within functions
 PFont tabFont;
+
+
 
 
 
@@ -35,10 +40,11 @@ PFont tabFont;
 // to finish setup.
 public void initialize() {
   
-  cp5 = new ControlP5(this);
-  
   size(1920, 1080);
   noStroke();
+  
+  cp5 = new ControlP5(this);
+  
   background(color(255));
  
  // -------------------------- //
@@ -51,6 +57,9 @@ public void initialize() {
 public void tabs() {
   
   tabFont = loadFont("Arial-BoldMT-48.vlw");
+  
+  fill(0, 0, 0, 127);
+  rect(0, 910, 1920, 100);
 
   cp5.getTab("default")
        .remove();
@@ -146,7 +155,10 @@ public void tabs() {
      ;
      
      
-  cp5.window().setPositionOfTabs(0,0);
+  cp5.window().setPositionOfTabs(0,tabPositionY);
+  
+  
+  
      
   
 }
