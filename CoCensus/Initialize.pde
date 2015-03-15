@@ -11,18 +11,24 @@ import controlP5.*;
 // ControlP5
 ControlP5 cp5; // ControlP5 object
 
+ControlWindow controlWindow; // adding graphics to tabs
+Canvas cc;
+
+
 // Colors
 color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(48, 191, 48);  // Green, option picked
+color windowBackground      = color(255);          // White 
 
 // Sizes
-int tabWidth      = 380;
-int tabWidthSmall = 190;
+int tabWidth      = 426;
+int tabWidthSmall = 96;
 int tabHeight     = 100;
 
 int tabFontSize      = 40;
 int tabFontSizeSmall = 25;
+int tabFontSizeBig   = 50;
 
 // Positions
 int tabPositionY = 900;
@@ -45,39 +51,47 @@ public void initialize() {
   
   cp5 = new ControlP5(this);
   
-  background(color(255));
+  background(windowBackground);
  
  // -------------------------- //
   
   tabs();
+  //householdSize();
+  //houseType();
+  //industry();
+  //heritage();
   
 }
 
 // setup tabs
 public void tabs() {
   
+  // set font
   tabFont = loadFont("Arial-BoldMT-48.vlw");
   
-  fill(0, 0, 0, 127);
-  rect(0, 910, 1920, 100);
-
+  cc = new MyCanvas();
+  cc.pre(); // use post() to draw on top of existing controllers, pre() otherwise
+  cp5.addCanvas(cc); 
+ 
+  // remove default tab
   cp5.getTab("default")
        .remove();
        
-  cp5.addTab("Start")
-     .setColorBackground(tabBackground)
-     .setColorLabel(color(255))
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive) 
-     .activateEvent(true)
-     .setWidth(tabWidthSmall) 
-     .setHeight(tabHeight)
-     .setId(1)
-     .getCaptionLabel()
-     .setFont(tabFont)
-     .setSize(tabFontSizeSmall)
-     .align(ControlP5.CENTER, ControlP5.CENTER)
-     ;
+  // add tabs, correspond to questions     
+  //cp5.addTab("Start") 
+  //   .setColorBackground(tabBackground)
+  //   .setColorLabel(color(255))
+  //   .setColorActive(tabBackgroundActive)
+  //   .setColorForeground(tabBackgroundActive) 
+  //   .activateEvent(true)
+  //   .setWidth(tabWidthSmall) 
+  //   .setHeight(tabHeight)
+  //   .setId(1)
+  //   .getCaptionLabel()
+  //   .setFont(tabFont)
+  //   .setSize(tabFontSizeSmall)
+  //   .align(ControlP5.CENTER, ControlP5.CENTER)
+  //   ;
      
   cp5.addTab("Household Size")
      .setColorBackground(tabBackground)
@@ -139,26 +153,68 @@ public void tabs() {
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ;
      
-  cp5.addTab("Finish")
-     .setColorBackground(tabBackground)
-     .setColorLabel(color(255))
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive) 
-     .activateEvent(true)
-     .setWidth(tabWidthSmall) 
-     .setHeight(tabHeight)
-     .setId(6)
+  // set tabs position   
+  
+  cp5.window().setPositionOfTabs(tabWidthSmall + 4,tabPositionY);
+  
+  // back and forward buttons, shift through tabs
+  
+  cp5.addButton("left")
+     .setPosition(0,tabPositionY)
+     .setSize(tabWidthSmall, tabHeight)
+     .setLabel("<")
      .getCaptionLabel()
      .setFont(tabFont)
-     .setSize(tabFontSizeSmall)
+     .setSize(tabFontSizeBig)
      .align(ControlP5.CENTER, ControlP5.CENTER)
-     ;
+     ; 
      
+  cp5.addButton("right")
+     .setPosition(width - tabWidthSmall - 1,tabPositionY)
+     .setSize(tabWidthSmall + 1, tabHeight)
+     .setLabel(">")
+     .getCaptionLabel()
+     .setFont(tabFont)
+     .setSize(tabFontSizeBig)
+     .align(ControlP5.CENTER, ControlP5.CENTER)
+     ; 
      
-  cp5.window().setPositionOfTabs(0,tabPositionY);
+  cp5.getController("left").moveTo("global");
+  cp5.getController("right").moveTo("global");
+ 
   
-  
-  
-     
-  
+}
+
+
+// shadow canvas
+class MyCanvas extends Canvas {
+
+  //int y;
+
+  public void setup(PApplet theApplet) {
+    //y = 200;
+  }  
+
+  public void draw(PApplet p) {
+    
+    for (int i = 20; i <= 45; i++) {
+      p.fill(0, 0, 0, 10);
+    
+      p.rect(0, tabPositionY + 10, width, tabHeight - 50);
+      p.rect(0, tabPositionY + tabHeight - 40, width, (tabHeight / 50) * i); 
+      
+      p.fill(255, 255, 255, 3);
+      p.rect(tabWidthSmall, tabPositionY + 10, 4, tabHeight - 50);
+      p.rect(tabWidthSmall, tabPositionY + tabHeight - 40, 4, (tabHeight / 50) * i); 
+      
+      p.rect(width - tabWidthSmall - 5, tabPositionY + 10, 4, tabHeight - 50);
+      p.rect(width - tabWidthSmall - 5, tabPositionY + tabHeight - 40, 4, (tabHeight / 50) * i); 
+      
+      //p.rect(tabWidthSmall + 3, tabPositionY + 10, 1, tabHeight - 50);
+      //p.rect(tabWidthSmall + 3, tabPositionY + tabHeight - 40, 1, (tabHeight / 50) * i); 
+      
+
+      
+    }
+  }
 }
