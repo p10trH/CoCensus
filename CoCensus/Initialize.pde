@@ -22,11 +22,11 @@ Canvas cc;
 color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(48, 191, 48);  // Green, option picked
-<<<<<<< HEAD
+//<<<<<<< HEAD
 color backgroundColor       = color(255);          // White background
-=======
+//=======
 color windowBackground      = color(255);          // White 
->>>>>>> origin/master
+//>>>>>>> origin/master
 
 // Sizes
 int tabWidth      = 426;
@@ -67,16 +67,14 @@ public void initialize() {
   
   cp5 = new ControlP5(this); 
   
-<<<<<<< HEAD
+
   background(backgroundColor);
-=======
   background(windowBackground);
->>>>>>> origin/master
  
  // -------------------------- //
   
   tabs();
-  //householdSize();
+  householdSize();
   //houseType();
   //industry();
   //heritage();
@@ -184,69 +182,24 @@ public void tabs() {
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ; 
      
-<<<<<<< HEAD
-  cp5.window().setPositionOfTabs(0,tabPositionY);
-  ////////////
-  resultStr = new String[] {"", "", "", "", "", "", ""};
-  activeHouseImgs = new PImage[] {loadImage("Active-House-1.png"),loadImage("Active-House-2.png"),loadImage("Active-House-3.png"),loadImage("Active-House-4.png"),loadImage("Active-House-5.png"),loadImage("Active-House-6.png")};
-  defaultHouseImgs  = new PImage[] {loadImage("House-1.png"),loadImage("House-2.png"),loadImage("House-3.png"),loadImage("House-4.png"),loadImage("House-5.png"),loadImage("House-6.png")};
-  //houseImgs = new PImage[] {loadImage("House-1.png"),loadImage("House-2.png"),loadImage("House-3.png"),loadImage("House-4.png"),loadImage("House-5.png"),loadImage("House-6.png")};
+  cp5.window().setPositionOfTabs(0,tabPositionY);  
   
-    String buttonName;
-    for(int i = 0; i < defaultHouseImgs.length; i++){      
-      
-      buttonName = "house-" + new Integer(i+1).toString(); 
-      cp5.addButton(buttonName)
-       .setPosition(leftIndent + (i % numCols)*(defaultHouseImgs[i].width + imageSpacing), topIndent + (i / numCols) * (defaultHouseImgs[i].height + imageSpacing))
-       .setImage(defaultHouseImgs[i])
-       .setSize(defaultHouseImgs[i])
-       .setId(10);
-      ;
-     cp5.getController(buttonName).moveTo("Household Size");
-    }
-     
-     
-     
-     
-   /*cp5.addButton("play1")
-     .setPosition(25,160)
-     .setImage(imgs[2])
-     .setSize(imgs[2]);
-     ;     
-   cp5.getController("play1").moveTo("Industry");
-     */
-=======
+
   cp5.getController("left").moveTo("global");
   cp5.getController("right").moveTo("global");
- 
->>>>>>> origin/master
   
 }
 
 
-<<<<<<< HEAD
 
-/*void keyPressed() {
-  switch(key) {
-    case('0'): r.deactivateAll(); break;
-    case('1'): r.activate(0); break;
-    case('2'): r.activate(1); break;
-    case('3'): r.activate(2); break;
-    case('4'): r.activate(3); break;
-    case('5'): r.activate(4); break;
-  }
-  
-}*/
-/*void radioButton(int a) {
-  println("a radio Button event: "+a);
-}*/
-=======
+
 // shadow canvas
 class MyCanvas extends Canvas {
 
 
   public void setup(PApplet theApplet) {
-    
+    //////////// Result string "initialization"
+    resultStr = new String[] {"", "", "", "", "", "", ""};
   }  
 
   public void draw(PApplet p) {
@@ -275,4 +228,3 @@ class MyCanvas extends Canvas {
     }
   }
 }
->>>>>>> origin/master
