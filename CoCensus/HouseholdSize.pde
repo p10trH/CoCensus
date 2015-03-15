@@ -1,3 +1,15 @@
+// Image spacing
+
+int leftIndent = 20;
+int topIndent = 20;
+int imageSpacing = 10;
+int numCols = 3;
+
+// Image variables
+  PImage[] activeHouseImgs;
+  PImage[] defaultHouseImgs;
+
+
 // Household Size
 public void householdSize(){
   activeHouseImgs = new PImage[] {loadImage("Active-House-1.png"),loadImage("Active-House-2.png"),loadImage("Active-House-3.png"),loadImage("Active-House-4.png"),loadImage("Active-House-5.png"),loadImage("Active-House-6.png")};

@@ -22,11 +22,11 @@ Canvas cc;
 color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(48, 191, 48);  // Green, option picked
-//<<<<<<< HEAD
+
 color backgroundColor       = color(255);          // White background
-//=======
+
 color windowBackground      = color(255);          // White 
-//>>>>>>> origin/master
+
 
 // Sizes
 int tabWidth      = 426;
@@ -44,23 +44,13 @@ int tabPositionY = 900;
 // Note: Fonts need to be loaded within functions
 PFont tabFont;
 
-// Image spacing
-
-int leftIndent = 20;
-int topIndent = 20;
-int imageSpacing = 10;
-int numCols = 3;
-
-// Image variables
-  PImage[] activeHouseImgs;
-  PImage[] defaultHouseImgs;
-  
-
-
 // Call this method once from main setup (CoCensus).
 // This method will call other methods in this file to
 // to finish setup.
 public void initialize() {
+  
+//////////// Result string "initialization"
+    resultStr = new String[] {"", "", "", "", "", "", ""};
   
   size(1920, 1080);
   noStroke();
@@ -198,8 +188,7 @@ class MyCanvas extends Canvas {
 
 
   public void setup(PApplet theApplet) {
-    //////////// Result string "initialization"
-    resultStr = new String[] {"", "", "", "", "", "", ""};
+
   }  
 
   public void draw(PApplet p) {
