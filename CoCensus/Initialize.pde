@@ -8,6 +8,9 @@ import controlP5.*;
 
 // Globals
 
+// Result string
+String [] resultStr;
+
 // ControlP5
 ControlP5 cp5; // ControlP5 object
 
@@ -15,6 +18,7 @@ ControlP5 cp5; // ControlP5 object
 color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(48, 191, 48);  // Green, option picked
+color backgroundColor       = color(255);          // White background
 
 // Sizes
 int tabWidth      = 380;
@@ -31,8 +35,17 @@ int tabPositionY = 900;
 // Note: Fonts need to be loaded within functions
 PFont tabFont;
 
+// Image spacing
 
+int leftIndent = 20;
+int topIndent = 20;
+int imageSpacing = 10;
+int numCols = 3;
 
+// Image variables
+  PImage[] activeHouseImgs;
+  PImage[] defaultHouseImgs;
+  
 
 
 // Call this method once from main setup (CoCensus).
@@ -43,9 +56,9 @@ public void initialize() {
   size(1920, 1080);
   noStroke();
   
-  cp5 = new ControlP5(this);
+  cp5 = new ControlP5(this); 
   
-  background(color(255));
+  background(backgroundColor);
  
  // -------------------------- //
   
@@ -156,9 +169,51 @@ public void tabs() {
      
      
   cp5.window().setPositionOfTabs(0,tabPositionY);
+  ////////////
+  resultStr = new String[] {"", "", "", "", "", "", ""};
+  activeHouseImgs = new PImage[] {loadImage("Active-House-1.png"),loadImage("Active-House-2.png"),loadImage("Active-House-3.png"),loadImage("Active-House-4.png"),loadImage("Active-House-5.png"),loadImage("Active-House-6.png")};
+  defaultHouseImgs  = new PImage[] {loadImage("House-1.png"),loadImage("House-2.png"),loadImage("House-3.png"),loadImage("House-4.png"),loadImage("House-5.png"),loadImage("House-6.png")};
+  //houseImgs = new PImage[] {loadImage("House-1.png"),loadImage("House-2.png"),loadImage("House-3.png"),loadImage("House-4.png"),loadImage("House-5.png"),loadImage("House-6.png")};
   
-  
-  
+    String buttonName;
+    for(int i = 0; i < defaultHouseImgs.length; i++){      
+      
+      buttonName = "house-" + new Integer(i+1).toString(); 
+      cp5.addButton(buttonName)
+       .setPosition(leftIndent + (i % numCols)*(defaultHouseImgs[i].width + imageSpacing), topIndent + (i / numCols) * (defaultHouseImgs[i].height + imageSpacing))
+       .setImage(defaultHouseImgs[i])
+       .setSize(defaultHouseImgs[i])
+       .setId(10);
+      ;
+     cp5.getController(buttonName).moveTo("Household Size");
+    }
      
+     
+     
+     
+   /*cp5.addButton("play1")
+     .setPosition(25,160)
+     .setImage(imgs[2])
+     .setSize(imgs[2]);
+     ;     
+   cp5.getController("play1").moveTo("Industry");
+     */
   
 }
+
+
+
+/*void keyPressed() {
+  switch(key) {
+    case('0'): r.deactivateAll(); break;
+    case('1'): r.activate(0); break;
+    case('2'): r.activate(1); break;
+    case('3'): r.activate(2); break;
+    case('4'): r.activate(3); break;
+    case('5'): r.activate(4); break;
+  }
+  
+}*/
+/*void radioButton(int a) {
+  println("a radio Button event: "+a);
+}*/
