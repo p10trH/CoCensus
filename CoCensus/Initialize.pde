@@ -171,9 +171,6 @@ public void tabs() {
      .setSize(tabFontSizeBig)
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ; 
-     
-  cp5.window().setPositionOfTabs(0,tabPositionY);  
-  
 
   cp5.getController("left").moveTo("global");
   cp5.getController("right").moveTo("global");
