@@ -23,8 +23,6 @@ color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(48, 191, 48);  // Green, option picked
 
-color backgroundColor       = color(255);          // White background
-
 color windowBackground      = color(255);          // White 
 
 
@@ -57,8 +55,6 @@ public void initialize() {
   
   cp5 = new ControlP5(this); 
   
-
-  background(backgroundColor);
   background(windowBackground);
  
  // -------------------------- //
