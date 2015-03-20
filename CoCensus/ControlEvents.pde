@@ -3,6 +3,8 @@
 // This will be used for debugging, to automate some actions, user feedback, etc.
 
 // Tab selection event
+
+
 void controlEvent(ControlEvent theControlEvent) {
   if (theControlEvent.isTab()) {
     println("got an event from tab : "+theControlEvent.getTab().getName()+" with id "+theControlEvent.getTab().getId());
@@ -16,15 +18,16 @@ void controlEvent(ControlEvent theControlEvent) {
   }
   else{
     String buttonName;
-    if(theControlEvent.getController().getId() == 10){ // in the household size
+    int eventId = theControlEvent.getController().getId();
+    if(eventId == houseId){ // Household button clicked
  
       for(int i = 0; i < defaultHouseImgs.length; i++){  
         buttonName = "house-" + new Integer(i+1).toString();
         
         if(buttonName.equals(theControlEvent.getController().getName())){
-          //println(theControlEvent.getController().getName());
           theControlEvent.getController().setImage(activeHouseImgs[i]);
-          resultStr[1] = new Integer(i+1).toString();
+          // write result...using index 1 arbitrarily....change this for other tabs
+          resultStr[1] = houseStr[i];
         }
         else{
           cp5.getController(buttonName).setImage(defaultHouseImgs[i]);

@@ -4,11 +4,12 @@ int leftIndent = 20;
 int topIndent = 20;
 int imageSpacing = 10;
 int numCols = 3;
-
+int houseId = 10;
 // Image variables
   PImage[] activeHouseImgs;
   PImage[] defaultHouseImgs;
 
+String houseStr[] = new String[] {"One", "Two", "Three", "Four", "Five", "Six or more"};
 
 // Household Size
 public void householdSize(){
@@ -22,7 +23,7 @@ public void householdSize(){
        .setPosition(leftIndent + (i % numCols)*(defaultHouseImgs[i].width + imageSpacing), topIndent + (i / numCols) * (defaultHouseImgs[i].height + imageSpacing))
        .setImage(defaultHouseImgs[i])
        .setSize(defaultHouseImgs[i])
-       .setId(10);
+       .setId(houseId);
       ;
      cp5.getController(buttonName).moveTo("Household Size");
     }

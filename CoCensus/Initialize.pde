@@ -48,7 +48,7 @@ PFont tabFont;
 public void initialize() {
   
 //////////// Result string "initialization"
-    resultStr = new String[] {"", "", "", "", "", "", ""};
+    resultStr = new String[] {"", "", "", "", "", "", ""}; // result string...add more quotes to have more areas of storage
   
   size(1920, 1080);
   noStroke();
