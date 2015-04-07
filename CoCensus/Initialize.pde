@@ -61,7 +61,7 @@ public void initialize() {
   
   tabs();
   householdSize();
-  //houseType();
+  houseType();
   //industry();
   //heritage();
   

@@ -1,25 +1,28 @@
 
 // Action handler
-void HouseHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
+void HouseTypeHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
   // Change these variables for each unique tab
-  int tabIndex = 1; // this is where we are storing the result of this tab into, should be unique for each tab
-  String finalStr[] = new String[] {"One",  // Stored result values to be stored into resultStr  
-                                    "Two", 
-                                    "Three", 
-                                    "Four", 
-                                    "Five", 
-                                    "Six or more"
+  int tabIndex = 2; // this is where we are storing the result of this tab into, should be unique for each tab
+  String finalStr[] = new String[] {"One-family house",                       // Stored result values to be stored into resultStr
+                                    "Attached One-family house", 
+                                    "Building with 2 apartments", 
+                                    "Building with 3-4 apartments", 
+                                    "Building with 5-9 apartments", 
+                                    "Building with 10-19 apartments", 
+                                    "Building with 20-49 apartments", 
+                                    "Building with 50 or more apartments", 
+                                    "Boat, RV, van, mobile home or other home"
                                   }; 
-  println("House: radio Button event: "+a);
+  println("HouseType: radio Button event: "+a);
   resultStr[tabIndex] = finalStr[a];
 }
 
 // Household Size button display
-public void householdSize(){
+public void houseType(){
   // Only need to change these variables/////////////////////////
-  int numImg = 6;  // number of images/buttons
-  String tabLabel = "Household Size"; // name of tab/screen that we want to attach this to
-  String fileName = "House"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
+  int numImg = 9;  // number of images/buttons
+  String tabLabel = "House Type"; // name of tab/screen that we want to attach this to
+  String fileName = "HouseType"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
   String fileType = ".png"; // filetype extension
   // Formatting vars ////////////////////////////
   int leftIndent = 20;
