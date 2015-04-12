@@ -10,6 +10,8 @@ import controlP5.*;
 
 // Result string
 String [] resultStr;
+// Send string
+float [] resultFloat;
 
 // ControlP5
 ControlP5 cp5; // ControlP5 object
@@ -48,8 +50,25 @@ PFont tabFont;
 public void initialize() {
   
 //////////// Result string "initialization"
-    resultStr = new String[] {"", "", "", "", "", "", ""}; // result string...add more quotes to have more areas of storage
-  
+    resultStr = new String[12];      // result string storing answers as strings
+    resultFloat   = new float[12];   // float array storing answers as floats to send to the server (as the original CoCensus program) 
+
+  // sending string from oroginal CoCensus program...Just the kiosk string for now, there's a second "logString" that is similar
+  /*String kioskString = "http://192.168.1.10//kiosk.php?NEW
+     &ancestry="        +ancFloatVal +    // 0  - Ancestry result
+    "&hhSizeFloatVal="  +hhSizeFloatVal+  // 1  - Household size result
+    "&indFloatVal="     +indFloatVal+     // 2  - Industry result
+    "&houseFloatVal="   +houseFloatVal+   // 3  - House type result
+    "&red="             +r+               // 4  - Avatar
+    "&green="           +g+               // 5  - Avatar
+    "&blue="            +b+               // 6  - Avatar
+    "&tagID="           +tagString+       // 7  - RFID tag number
+    "&type="            +typeString+      // 8  - Celebrity name or custom
+    "&mouth="           +mouthInt+        // 9  - Avatar
+    "&eyes="            +eyesInt+         // 10 - Avatar
+    "&nose="            +noseInt          // 11 - Avatar
+    ;*/
+    
   size(1920, 1080);
   noStroke();
   

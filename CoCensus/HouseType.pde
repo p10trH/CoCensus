@@ -2,7 +2,8 @@
 // Action handler
 void HouseTypeHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
   // Change these variables for each unique tab
-  int tabIndex = 2; // this is where we are storing the result of this tab into, should be unique for each tab
+  int tabIndex = 3; // this is where we are storing the result of this tab into, should be unique for each tab
+  
   String finalStr[] = new String[] {"One-family house",                       // Stored result values to be stored into resultStr
                                     "Attached One-family house", 
                                     "Building with 2 apartments", 
@@ -13,18 +14,28 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
                                     "Building with 50 or more apartments", 
                                     "Boat, RV, van, mobile home or other home"
                                   }; 
-  println("HouseType: radio Button event: "+a);
-  resultStr[tabIndex] = finalStr[a];
+  println("HouseType: radio Button event: "+a); // if you really want you can change the name of the tab
+  
+  ///////////////////////////////////////////////////////////////////////////////////////////
+  int index = a - 1; // subtracting one for array indexing  
+  if(a < 0){
+    resultStr[tabIndex] = ""; // reset resultStr 
+  }
+  else{
+    resultStr[tabIndex] = finalStr[index];
+    resultFloat[tabIndex] = a;
+    println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
+  }
 }
 
-// Household Size button display
+// Household Type button display
 public void houseType(){
-  // Only need to change these variables/////////////////////////
+  // Only need to change these variables//////////////////////////////////////////////////////
   int numImg = 9;  // number of images/buttons
   String tabLabel = "House Type"; // name of tab/screen that we want to attach this to
   String fileName = "HouseType"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
   String fileType = ".png"; // filetype extension
-  // Formatting vars ////////////////////////////
+  // Formatting vars /////////////////////////////////////////////////////////
   int leftIndent = 20;
   int topIndent = 120;
   int numCols = 3;
@@ -54,7 +65,7 @@ public void houseType(){
          ;
   for(i = 0; i < numImg; i++){
       defaultStr = fileName + "-" + new Integer(i+1).toString();
-      radioObj.addItem(defaultStr, i);
+      radioObj.addItem(defaultStr, i + 1); // i + 1 for sending to server float
       cp5.getController(defaultStr).setImages(defaultImgs[i], activeImgs[i], activeImgs[i]);
   }
      
