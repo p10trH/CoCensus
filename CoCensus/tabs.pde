@@ -1,3 +1,6 @@
+
+PImage tabImg;
+
 // setup tabs
 public void tabs() {
   
@@ -113,10 +116,15 @@ class MyCanvas extends Canvas {
 
   public void setup(PApplet theApplet) {
 
+    tabImg = loadImage("navigation.png");
+    
   }  
 
   public void draw(PApplet p) {
     
+    p.image(tabImg, 0, tabPositionY);
+    
+    /*
     for (int i = 20; i <= 45; i++) {
       p.fill(0, 0, 0, 10);
     
@@ -139,5 +147,6 @@ class MyCanvas extends Canvas {
       p.rect(tabWidthSmall + 3 * tabWidth + 15, tabPositionY + 10, 1, tabHeight - 50);
       p.rect(tabWidthSmall + 3 * tabWidth + 15, tabPositionY + tabHeight - 40, 1, (tabHeight / 50) * i);   
     }
+    */
   }
 }
