@@ -84,4 +84,6 @@ public void initialize() {
   //industry();
   //heritage();
   
+  startScreen();
+  
 }
