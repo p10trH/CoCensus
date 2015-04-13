@@ -9,6 +9,9 @@ void controlEvent(ControlEvent theControlEvent) {
   if (theControlEvent.isTab()) {
     println("got an event from tab : "+theControlEvent.getTab().getName()+" with id "+theControlEvent.getTab().getId());
     currentTab = theControlEvent.getTab().getId();
+    
+    tabCoordinates.x = theControlEvent.getTab().getArrayValue()[0];
+    //tabCoordinates.y = theControlEvent.getTab().getArrayValue()[1];
   }
  
 }

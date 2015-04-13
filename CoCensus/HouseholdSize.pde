@@ -4,36 +4,42 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   // Change these variables for each unique tab//////////////////////////////////////////////
   int tabIndex = 1; // this is where we are storing the result of this tab into, should be unique for each tab
 
-  String finalStr[] = new String[] {"One",  // Stored result values to be stored into resultStr  
-                                    "Two", 
-                                    "Three", 
-                                    "Four", 
-                                    "Five", 
-                                    "Six or more"
-                                  }; 
+  String finalStr[] = new String[] {
+    "One", // Stored result values to be stored into resultStr  
+    "Two", 
+    "Three", 
+    "Four", 
+    "Five", 
+    "Six or more"
+  }; 
   println("House: radio Button event: "+a);  // if you really want you can change the name of the tab
-  
+
   ///////////////////////////////////////////////////////////////////////////////////////////
-  
+
   int index = a - 1; // subtracting one for array indexing
-  if(a < 0){
-   resultStr[tabIndex] = ""; // reset resultStr 
-  }
-  else{
+  if (a < 0) {
+    resultStr[tabIndex] = ""; // reset resultStr
+  } else {
     resultStr[tabIndex] = finalStr[index];
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
   }
+
+  // changes answered tab green
+  //cp5.getTab("Household Size")
+  //   .setColorBackground(tabBackgroundComplete)
+  //   .setColorActive(tabBackground)
+  //   .setColorForeground(tabBackground).update();
 }
 
 // Household Size button display
-public void householdSize(){
+public void householdSize() {
   // Only need to change these variables//////////////////////////////////////////////////////
   int numImg = 6;  // number of images/buttons
   String tabLabel = "Household Size"; // name of tab/screen that we want to attach this to
   String fileName = "House"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, Active-House-2.png
   String fileType = ".png"; // filetype extension
-  
+
   String titleText = tabLabel;
   String helpText = "How many people, including yourself, live in your household?";
   // Formatting vars /////////////////////////////////////////////////////////
@@ -48,50 +54,49 @@ public void householdSize(){
   //resultStr[tabIndex] = "";  // initializing
   PImage[] activeImgs = new PImage[numImg];
   PImage[] defaultImgs  = new PImage[numImg];
-   
-  for(i = 0; i < numImg; i++){    
+
+  for (i = 0; i < numImg; i++) {    
     activeStr = "Active-" + fileName + "-" + new Integer(i+1).toString() + fileType;
     defaultStr = fileName + "-" + new Integer(i+1).toString() + fileType;  
     activeImgs [i] = loadImage(activeStr);
-    defaultImgs[i] = loadImage(defaultStr);    
+    defaultImgs[i] = loadImage(defaultStr);
   }
-        
+
   Textarea titleTextArea, helpTextArea;
   titleTextArea = cp5.addTextarea(fileName + "Title")
     .setPosition(leftIndent, 20)
-    .setSize(width-80, 100)
-    .setLineHeight(72)
-    .setColor(0)
-    .setFont(titleFont)
-    .setText(titleText)
-    .hideScrollbar()
-    .moveTo(tabLabel)
-    ;
+      .setSize(width-80, 100)
+        .setLineHeight(72)
+          .setColor(0)
+            .setFont(titleFont)
+              .setText(titleText)
+                .hideScrollbar()
+                  .moveTo(tabLabel)
+                    ;
   helpTextArea = cp5.addTextarea(fileName + "HelpText")
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-    .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
-    .setLineHeight(72)
-    .setColor(0)
-    .setFont(helpFont)
-    .setText(helpText)
-    .hideScrollbar()
-    .moveTo(tabLabel)
-    ;
-  
-    
+      .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+        .setLineHeight(72)
+          .setColor(0)
+            .setFont(helpFont)
+              .setText(helpText)
+                .hideScrollbar()
+                  .moveTo(tabLabel)
+                    ;
+
+
   RadioButton radioObj = cp5.addRadioButton(fileName+"Handler")
-         .setPosition(leftIndent,topIndent)
-         .setSize(defaultImgs[0].width,defaultImgs[0].height)
-         .setItemsPerRow(numCols)
-         .setSpacingColumn(horizSpacing)
-         .setSpacingRow(vertSpacing)
-         .moveTo(tabLabel)
-         ;
-  for(i = 0; i < numImg; i++){
-      defaultStr = fileName + "-" + new Integer(i+1).toString();
-      radioObj.addItem(defaultStr, i + 1); // i + 1 for sending to server float
-      cp5.getController(defaultStr).setImages(defaultImgs[i], activeImgs[i], activeImgs[i]);
+    .setPosition(leftIndent, topIndent)
+      .setSize(defaultImgs[0].width, defaultImgs[0].height)
+        .setItemsPerRow(numCols)
+          .setSpacingColumn(horizSpacing)
+            .setSpacingRow(vertSpacing)
+              .moveTo(tabLabel)
+                ;
+  for (i = 0; i < numImg; i++) {
+    defaultStr = fileName + "-" + new Integer(i+1).toString();
+    radioObj.addItem(defaultStr, i + 1); // i + 1 for sending to server float
+    cp5.getController(defaultStr).setImages(defaultImgs[i], activeImgs[i], activeImgs[i]);
   }
-     
 }
 

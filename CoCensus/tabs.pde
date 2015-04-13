@@ -1,7 +1,19 @@
 
 PImage tabImg;
+PImage tabSel;
 
 int currentTab = 2;
+
+Canvas cc3;
+
+
+PVector tabCoordinates;
+
+float tab1[] = new float[] {tabWidthSmall + 4,tabPositionY};
+float tab2[] = new float[] {tabWidthSmall + tabWidth + 8,tabPositionY};
+float tab3[] = new float[] {tabWidthSmall + 2 * tabWidth + 12,tabPositionY};
+float tab4[] = new float[] {tabWidthSmall + 3 * tabWidth + 16,tabPositionY};
+
 
 // setup tabs
 public void tabs() {
@@ -9,9 +21,15 @@ public void tabs() {
   // set font
   tabFont = loadFont("Arial-BoldMT-78.vlw");
   
+  tabCoordinates = new PVector(tabWidthSmall + 4, tabPositionY);
+  
   cc = new MyCanvas();
   cc.pre(); // use post() to draw on top of existing controllers, pre() otherwise
   cp5.addCanvas(cc); 
+  
+  cc3 = new MyCanvas3();
+  cc3.post(); // use post() to draw on top of existing controllers, pre() otherwise
+  cp5.addCanvas(cc3); 
  
   // remove default tab
   cp5.getTab("default")
@@ -19,10 +37,14 @@ public void tabs() {
        
   // add tabs, correspond to questions     
   cp5.addTab("Household Size")
+     //.setUpdate(true) 
+     .setArrayValue(tab1) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive) 
+     //.setColorActive(tabBackgroundActive)
+     .setColorActive(tabBackground)
+     //.setColorForeground(tabBackgroundActive)
+     .setColorForeground(tabBackground)
      .activateEvent(true)
      .setActive(true)
      .setWidth(tabWidth) 
@@ -35,10 +57,13 @@ public void tabs() {
      ;
      
   cp5.addTab("House Type")
+     .setArrayValue(tab2) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive) 
+     //.setColorActive(tabBackgroundActive)
+     .setColorActive(tabBackground)
+     //.setColorForeground(tabBackgroundActive)
+    .setColorForeground(tabBackground) 
      .activateEvent(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
@@ -50,10 +75,13 @@ public void tabs() {
      ;
      
   cp5.addTab("Industry")
+     .setArrayValue(tab3) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive) 
+     //.setColorActive(tabBackgroundActive)
+     .setColorActive(tabBackground)
+     //.setColorForeground(tabBackgroundActive) 
+     .setColorForeground(tabBackground)
      .activateEvent(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
@@ -65,10 +93,13 @@ public void tabs() {
      ;
      
   cp5.addTab("Heritage")
+     .setArrayValue(tab4) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive) 
+     //.setColorActive(tabBackgroundActive)
+     .setColorActive(tabBackground)
+     //.setColorForeground(tabBackgroundActive) 
+     .setColorForeground(tabBackground)
      .activateEvent(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
@@ -79,6 +110,8 @@ public void tabs() {
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ;
      
+
+   
   // set tabs position   
   
   cp5.window().setPositionOfTabs(tabWidthSmall + 4,tabPositionY);
@@ -89,6 +122,8 @@ public void tabs() {
      .setPosition(0,tabPositionY)
      .setSize(tabWidthSmall, tabHeight)
      .setLabel("<")
+     .setColorActive(tabBackgroundActive)
+     .setColorForeground(tabBackgroundActive)
      .getCaptionLabel()
      .setFont(tabFont)
      .setSize(tabFontSizeBig)
@@ -99,6 +134,8 @@ public void tabs() {
      .setPosition(width - tabWidthSmall - 1,tabPositionY)
      .setSize(tabWidthSmall + 1, tabHeight)
      .setLabel(">")
+     .setColorActive(tabBackgroundActive)
+     .setColorForeground(tabBackgroundActive)
      .getCaptionLabel()
      .setFont(tabFont)
      .setSize(tabFontSizeBig)
@@ -118,20 +155,21 @@ public void left(int theValue) {
   
     if (cp5.getTab("Household Size").getId() == currentTab){
        cp5.getTab("Household Size").bringToFront();
+       tabCoordinates.x = cp5.getTab("Household Size").getArrayValue()[0];
     }
     else if (cp5.getTab("House Type").getId() == currentTab){
        cp5.getTab("House Type").bringToFront();
+       tabCoordinates.x = cp5.getTab("House Type").getArrayValue()[0];
     }
     else if (cp5.getTab("Industry").getId() == currentTab){
        cp5.getTab("Industry").bringToFront();
+       tabCoordinates.x = cp5.getTab("Industry").getArrayValue()[0];
     }
     else if (cp5.getTab("Heritage").getId() == currentTab){
        cp5.getTab("Heritage").bringToFront();
+       tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
     }
-    
   }
-
-  
 }
 
 public void right(int theValue) {
@@ -142,20 +180,21 @@ public void right(int theValue) {
   
     if (cp5.getTab("Household Size").getId() == currentTab){
        cp5.getTab("Household Size").bringToFront();
+       tabCoordinates.x = cp5.getTab("Household Size").getArrayValue()[0];
     }
     else if (cp5.getTab("House Type").getId() == currentTab){
        cp5.getTab("House Type").bringToFront();
+       tabCoordinates.x = cp5.getTab("House Type").getArrayValue()[0];
     }
     else if (cp5.getTab("Industry").getId() == currentTab){
        cp5.getTab("Industry").bringToFront();
+       tabCoordinates.x = cp5.getTab("Industry").getArrayValue()[0];
     }
     else if (cp5.getTab("Heritage").getId() == currentTab){
        cp5.getTab("Heritage").bringToFront();
-    }
-    
-  }
-
-  
+       tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
+    } 
+  } 
 }
 
 
@@ -198,5 +237,22 @@ class MyCanvas extends Canvas {
       p.rect(tabWidthSmall + 3 * tabWidth + 15, tabPositionY + tabHeight - 40, 1, (tabHeight / 50) * i);   
     }
     */
+  }
+}
+
+class MyCanvas3 extends Canvas {
+
+
+  public void setup(PApplet theApplet) {
+
+    tabSel = loadImage("navigationSelect.png");
+    
+  }  
+
+  public void draw(PApplet p) {
+    
+    p.image(tabSel, tabCoordinates.x , tabCoordinates.y);
+    //background(windowBackground);
+
   }
 }

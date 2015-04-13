@@ -26,6 +26,9 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
   }
+  
+  // changes answered tab green
+  //cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).update();
 }
 
 // Household Type button display

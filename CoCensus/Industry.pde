@@ -32,6 +32,9 @@ void IndustryHandler(int a) { // change name to be the same as fileName + Handle
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
   }
+  
+  // changes answered tab green
+  //cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).update();
 }
 
 // Household Size button display

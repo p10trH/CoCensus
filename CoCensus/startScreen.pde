@@ -41,6 +41,7 @@ class MyCanvas2 extends Canvas {
 
   public void draw(PApplet p) {
     
+    
     image(startScreenBackground,0,0);
     // renders a square with randomly changing colors
     // make changes here.
