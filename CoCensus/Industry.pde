@@ -41,6 +41,9 @@ public void industry(){
   String tabLabel = "Industry"; // name of tab/screen that we want to attach this to
   String fileName = "Industry"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
   String fileType = ".png"; // filetype extension
+  
+  String titleText = tabLabel;
+  String helpText = "In what industry do you work or want to work?";
   // Formatting vars /////////////////////////////////////////////////////////
   int leftIndent = 20;
   int topIndent = 120;
@@ -60,10 +63,32 @@ public void industry(){
     activeImgs [i] = loadImage(activeStr);
     defaultImgs[i] = loadImage(defaultStr);    
   }
+  
+  Textarea titleTextArea, helpTextArea;
+  titleTextArea = cp5.addTextarea(fileName + "Title")
+    .setPosition(leftIndent, 20)
+    .setSize(width-80, 100)
+    .setLineHeight(72)
+    .setColor(0)
+    .setFont(titleFont)
+    .setText(titleText)
+    .hideScrollbar()
+    .moveTo(tabLabel)
+    ;
+  helpTextArea = cp5.addTextarea(fileName + "HelpText")
+    .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+    .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+    .setLineHeight(72)
+    .setColor(0)
+    .setFont(helpFont)
+    .setText(helpText)
+    .hideScrollbar()
+    .moveTo(tabLabel)
+    ;
     
   RadioButton radioObj = cp5.addRadioButton(fileName+"Handler")
          .setPosition(leftIndent,topIndent)
-         .setSize(defaultImgs[0].width * 3 / 4,defaultImgs[0].height * 3 / 4)
+         .setSize(defaultImgs[0].width,defaultImgs[0].height)
          .setItemsPerRow(numCols)
          .setSpacingColumn(horizSpacing)
          .setSpacingRow(vertSpacing)

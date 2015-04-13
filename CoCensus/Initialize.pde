@@ -46,6 +46,10 @@ int tabPositionY = 900;
 PFont tabFont;
 PFont startFont;
 
+// Some other fonts for pages
+
+PFont titleFont = createFont("Arial",72,true); // use true/false for smooth/no-smooth
+PFont helpFont = createFont("Arial",55,true); // use true/false for smooth/no-smooth
 
 
 // Call this method once from main setup (CoCensus).

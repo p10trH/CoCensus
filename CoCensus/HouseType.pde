@@ -33,8 +33,11 @@ public void houseType(){
   // Only need to change these variables//////////////////////////////////////////////////////
   int numImg = 9;  // number of images/buttons
   String tabLabel = "House Type"; // name of tab/screen that we want to attach this to
-  String fileName = "HouseType"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
+  String fileName = "HouseType"; // name of the file name, ex. HouseType-1.png, HouseType-2.png and Active-HouseType-1.png, Active-HouseType-2.png
   String fileType = ".png"; // filetype extension
+  
+  String titleText = tabLabel;
+  String helpText = "Which of these best describes your house?";
   // Formatting vars /////////////////////////////////////////////////////////
   int leftIndent = 20;
   int topIndent = 120;
@@ -42,6 +45,7 @@ public void houseType(){
   int horizSpacing = 50;
   int vertSpacing = 50;
   // Temp vars ////////////////////////////
+
   int i = 0;
   String activeStr, defaultStr;
   
@@ -54,6 +58,32 @@ public void houseType(){
     activeImgs [i] = loadImage(activeStr);
     defaultImgs[i] = loadImage(defaultStr);    
   }
+    
+  
+    
+  Textarea titleTextArea, helpTextArea;
+  titleTextArea = cp5.addTextarea(fileName + "Title")
+    .setPosition(leftIndent, 20)
+    .setSize(width-80, 100)
+    .setLineHeight(72)
+    .setColor(0)
+    .setFont(titleFont)
+    .setText(titleText)
+    .hideScrollbar()
+    .moveTo(tabLabel)
+    ;
+  helpTextArea = cp5.addTextarea(fileName + "HelpText")
+    .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+    .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+    .setLineHeight(72)
+    .setColor(0)
+    .setFont(helpFont)
+    .setText(helpText)
+    .hideScrollbar()
+    .moveTo(tabLabel)
+    ;
+    
+
     
   RadioButton radioObj = cp5.addRadioButton(fileName+"Handler")
          .setPosition(leftIndent,topIndent)
@@ -68,6 +98,7 @@ public void houseType(){
       radioObj.addItem(defaultStr, i + 1); // i + 1 for sending to server float
       cp5.getController(defaultStr).setImages(defaultImgs[i], activeImgs[i], activeImgs[i]);
   }
+  
      
 }
 
