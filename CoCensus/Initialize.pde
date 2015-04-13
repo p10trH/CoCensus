@@ -14,7 +14,8 @@ String [] resultStr;
 float [] resultFloat;
 
 // ControlP5
-ControlP5 cp5; // ControlP5 object
+ControlP5 cp5; // ControlP5 object // used for tabs
+ControlP5 cp6; // used for start screen
 
 ControlWindow controlWindow; // adding graphics to tabs
 Canvas cc;
@@ -76,6 +77,7 @@ public void initialize() {
   noStroke();
   
   cp5 = new ControlP5(this); 
+  cp6 = new ControlP5(this); 
   
   background(windowBackground);
  
@@ -88,5 +90,7 @@ public void initialize() {
   //heritage();
   
   startScreen();
+  
+  cp5.hide();
   
 }
