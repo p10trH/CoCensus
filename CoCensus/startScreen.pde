@@ -17,13 +17,8 @@ public void startScreen() {
   cp6.addButton("start")
      .setPosition(700, 270)
      .setImages(loadImage("startButtonDefault.png"), loadImage("startButtonActive.png"), loadImage("startButtonActive.png"))
-     //.setSize(200, 200)
      .updateSize()
-     //.setLabel("START")
-     //.getCaptionLabel()
-     //.setFont(startFont)
-     //.setSize(tabFontSizeBig)
-     //.align(ControlP5.CENTER, ControlP5.CENTER)
+     .setValue(0)
      ; 
   
 }
