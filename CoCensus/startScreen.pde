@@ -9,13 +9,14 @@ public void startScreen() {
   Group g1 = cp5.addGroup("g1")
                 .setPosition(0,0)
                 //.setBackgroundHeight(100)
-                .setHeight(100)
-                .setWidth(100)
+                .setHeight(1080)
+                .setWidth(1920)
                 .setBackgroundColor(windowBackground)
                 .setBarHeight(0).hideBar()
                 ;
   
   cp5.addButton("start")
+     .setGroup(g1)
      .setPosition(500,500)
      .setImages(loadImage("circle.png"), loadImage("circle2.png"), loadImage("circle3.png"))
      //.setSize(200, 200)
@@ -26,7 +27,5 @@ public void startScreen() {
      .setSize(tabFontSizeBig)
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ; 
-
-  cp5.getController("start").moveTo("global");
   
 }

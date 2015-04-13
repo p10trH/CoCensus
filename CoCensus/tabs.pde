@@ -4,6 +4,15 @@ PImage tabImg;
 // setup tabs
 public void tabs() {
   
+  Group tabsGroup = cp5.addGroup("tabsGroup")
+                .setPosition(0,0)
+                //.setBackgroundHeight(100)
+                .setHeight(1080)
+                .setWidth(1920)
+                .setBackgroundColor(windowBackground)
+                .setBarHeight(0).hideBar()
+                ;
+  
   // set font
   tabFont = loadFont("Arial-BoldMT-78.vlw");
   
@@ -17,6 +26,7 @@ public void tabs() {
        
   // add tabs, correspond to questions     
   cp5.addTab("Household Size")
+     .setGroup(tabsGroup)
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      .setColorActive(tabBackgroundActive)
@@ -32,6 +42,7 @@ public void tabs() {
      ;
      
   cp5.addTab("House Type")
+     .setGroup(tabsGroup)
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      .setColorActive(tabBackgroundActive)
@@ -47,6 +58,7 @@ public void tabs() {
      ;
      
   cp5.addTab("Industry")
+     .setGroup(tabsGroup)
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      .setColorActive(tabBackgroundActive)
@@ -62,6 +74,7 @@ public void tabs() {
      ;
      
   cp5.addTab("Heritage")
+     .setGroup(tabsGroup)
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      .setColorActive(tabBackgroundActive)
