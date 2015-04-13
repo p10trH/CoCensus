@@ -43,6 +43,7 @@ int tabPositionY = 900;
 // Fonts 
 // Note: Fonts need to be loaded within functions
 PFont tabFont;
+PFont startFont;
 
 // Call this method once from main setup (CoCensus).
 // This method will call other methods in this file to

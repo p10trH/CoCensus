@@ -5,7 +5,7 @@ PImage tabImg;
 public void tabs() {
   
   // set font
-  tabFont = loadFont("Arial-BoldMT-48.vlw");
+  tabFont = loadFont("Arial-BoldMT-78.vlw");
   
   cc = new MyCanvas();
   cc.pre(); // use post() to draw on top of existing controllers, pre() otherwise
