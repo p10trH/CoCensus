@@ -14,16 +14,15 @@ public void startScreen() {
   
   //cp6.setImage(loadImage("circle.png"));
   
-  cp6.addButton("start")
+  cp6.addButton("startButton")
      .setPosition(700, 270)
      .setImages(loadImage("startButtonDefault.png"), loadImage("startButtonActive.png"), loadImage("startButtonActive.png"))
      .updateSize()
-     .setValue(0)
      ; 
   
 }
 
-public void start(int theValue) {
+public void startButton(int theValue) {
   
   cp6.hide();
   cp5.show();
