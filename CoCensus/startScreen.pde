@@ -16,7 +16,7 @@ public void startScreen() {
   
   cp6.addButton("start")
      .setPosition(500,500)
-     .setImages(loadImage("circle.png"), loadImage("circle2.png"), loadImage("circle3.png"))
+     //.setImages(loadImage("circle.png"), loadImage("circle2.png"), loadImage("circle3.png"))
      //.setSize(200, 200)
      .updateSize()
      .setLabel("START")
