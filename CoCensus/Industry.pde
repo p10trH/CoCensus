@@ -1,17 +1,25 @@
 
 // Action handler
-void HouseHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
+void IndustryHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
   // Change these variables for each unique tab//////////////////////////////////////////////
-  int tabIndex = 1; // this is where we are storing the result of this tab into, should be unique for each tab
+  int tabIndex = 2; // this is where we are storing the result of this tab into, should be unique for each tab
 
-  String finalStr[] = new String[] {"One",  // Stored result values to be stored into resultStr  
-                                    "Two", 
-                                    "Three", 
-                                    "Four", 
-                                    "Five", 
-                                    "Six or more"
+  String finalStr[] = new String[] {"Agriculture, forestry, fishing", // Stored result values to be stored into resultStr 
+                                    "Mining", 
+                                    "Construction", 
+                                    "Manufacturing", 
+                                    "Transportation", 
+                                    "Wholesale trade", 
+                                    "Retail trade", 
+                                    "Finance, insurance, real estate, rental and leasing", 
+                                    "Business, professional, scientific, management, administrative, waste management services", 
+                                    "Health and social services", 
+                                    "Educational services", 
+                                    "Arts, entertainment, recreation, accommodation, food, personal services", 
+                                    "Public administration", 
+                                    "Communication, information, and other public utilities"
                                   }; 
-  println("House: radio Button event: "+a);  // if you really want you can change the name of the tab
+  println("Industry: radio Button event: "+a);  // if you really want you can change the name of the tab
   
   ///////////////////////////////////////////////////////////////////////////////////////////
   
@@ -27,16 +35,16 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
 }
 
 // Household Size button display
-public void householdSize(){
+public void industry(){
   // Only need to change these variables//////////////////////////////////////////////////////
-  int numImg = 6;  // number of images/buttons
-  String tabLabel = "Household Size"; // name of tab/screen that we want to attach this to
-  String fileName = "House"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
+  int numImg = 14;  // number of images/buttons
+  String tabLabel = "Industry"; // name of tab/screen that we want to attach this to
+  String fileName = "Industry"; // name of the file name, ex. House-1.png, House-2.png and Active-House-1.png, active-House-2.png
   String fileType = ".png"; // filetype extension
   // Formatting vars /////////////////////////////////////////////////////////
   int leftIndent = 20;
   int topIndent = 120;
-  int numCols = 3;
+  int numCols = 5;
   int horizSpacing = 50;
   int vertSpacing = 50;
   // Temp vars ////////////////////////////

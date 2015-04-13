@@ -86,7 +86,7 @@ public void initialize() {
   tabs();
   householdSize();
   houseType();
-  //industry();
+  industry();
   //heritage();
   
   startScreen();
