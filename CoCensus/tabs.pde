@@ -1,6 +1,8 @@
 
 PImage tabImg;
 
+int currentTab = 2;
+
 // setup tabs
 public void tabs() {
   
@@ -22,6 +24,7 @@ public void tabs() {
      .setColorActive(tabBackgroundActive)
      .setColorForeground(tabBackgroundActive) 
      .activateEvent(true)
+     .setActive(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
      .setId(2)
@@ -107,6 +110,53 @@ public void tabs() {
   
 }
 
+public void left(int theValue) {
+  
+  if (currentTab > 2 && currentTab <= 5) {
+    
+    currentTab--;
+  
+    if (cp5.getTab("Household Size").getId() == currentTab){
+       cp5.getTab("Household Size").bringToFront();
+    }
+    else if (cp5.getTab("House Type").getId() == currentTab){
+       cp5.getTab("House Type").bringToFront();
+    }
+    else if (cp5.getTab("Industry").getId() == currentTab){
+       cp5.getTab("Industry").bringToFront();
+    }
+    else if (cp5.getTab("Heritage").getId() == currentTab){
+       cp5.getTab("Heritage").bringToFront();
+    }
+    
+  }
+
+  
+}
+
+public void right(int theValue) {
+  
+  if (currentTab >= 2 && currentTab < 5) {
+    
+    currentTab++;
+  
+    if (cp5.getTab("Household Size").getId() == currentTab){
+       cp5.getTab("Household Size").bringToFront();
+    }
+    else if (cp5.getTab("House Type").getId() == currentTab){
+       cp5.getTab("House Type").bringToFront();
+    }
+    else if (cp5.getTab("Industry").getId() == currentTab){
+       cp5.getTab("Industry").bringToFront();
+    }
+    else if (cp5.getTab("Heritage").getId() == currentTab){
+       cp5.getTab("Heritage").bringToFront();
+    }
+    
+  }
+
+  
+}
 
 
 
