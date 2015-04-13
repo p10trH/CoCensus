@@ -25,7 +25,8 @@ public void startScreen() {
 public void startButton(int theValue) {
   
   cp6.hide();
-  cp5.show();
+  cp7.show();
+  //cp5.show();
   
 }
 

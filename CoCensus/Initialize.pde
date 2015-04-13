@@ -16,6 +16,7 @@ float [] resultFloat;
 // ControlP5
 ControlP5 cp5; // ControlP5 object // used for tabs
 ControlP5 cp6; // used for start screen
+ControlP5 cp7; // for welcome screen
 
 ControlWindow controlWindow; // adding graphics to tabs
 Canvas cc;
@@ -94,7 +95,10 @@ public void initialize() {
   //heritage();
   
   startScreen();
+  welcome();
   
   cp5.hide();
+  cp7.hide();
+  
   
 }
