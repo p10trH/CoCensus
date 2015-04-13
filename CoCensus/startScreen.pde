@@ -15,16 +15,23 @@ public void startScreen() {
   //cp6.setImage(loadImage("circle.png"));
   
   cp6.addButton("start")
-     .setPosition(500,500)
-     //.setImages(loadImage("circle.png"), loadImage("circle2.png"), loadImage("circle3.png"))
+     .setPosition(700, 270)
+     .setImages(loadImage("startButtonDefault.png"), loadImage("startButtonActive.png"), loadImage("startButtonActive.png"))
      //.setSize(200, 200)
      .updateSize()
-     .setLabel("START")
-     .getCaptionLabel()
-     .setFont(startFont)
-     .setSize(tabFontSizeBig)
-     .align(ControlP5.CENTER, ControlP5.CENTER)
+     //.setLabel("START")
+     //.getCaptionLabel()
+     //.setFont(startFont)
+     //.setSize(tabFontSizeBig)
+     //.align(ControlP5.CENTER, ControlP5.CENTER)
      ; 
+  
+}
+
+public void start(int theValue) {
+  
+  cp6.hide();
+  cp5.show();
   
 }
 
