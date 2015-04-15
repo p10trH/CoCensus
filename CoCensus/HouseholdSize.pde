@@ -27,7 +27,7 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
 
   // changes answered tab green
   //cp5.getTab("Household Size")
-  //   .setColorBackground(tabBackgroundComplete)
+  //   .setColorBackground(tabBackgroundComplete);
   //   .setColorActive(tabBackground)
   //   .setColorForeground(tabBackground).update();
 }
@@ -72,6 +72,7 @@ public void householdSize() {
               .setText(titleText)
                 .hideScrollbar()
                   .moveTo(tabLabel)
+                  .disableColorBackground()
                     ;
   helpTextArea = cp5.addTextarea(fileName + "HelpText")
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
@@ -82,6 +83,7 @@ public void householdSize() {
               .setText(helpText)
                 .hideScrollbar()
                   .moveTo(tabLabel)
+                  .disableColorBackground()
                     ;
 
 

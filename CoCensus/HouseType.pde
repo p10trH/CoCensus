@@ -1,4 +1,6 @@
 
+Textarea titleTextArea1, helpTextArea1;
+
 // Action handler
 void HouseTypeHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
   // Change these variables for each unique tab
@@ -28,7 +30,11 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
   }
   
   // changes answered tab green
-  //cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).update();
+  cp5.getTab("House Type").setColorBackground(tabBackgroundComplete);//.update();
+  //cp5.getWindow("House Type").setColorBackground(tabBackgroundComplete);//.update();
+  
+  helpTextArea1.setColorBackground(windowBackground);
+
 }
 
 // Household Type button display
@@ -64,8 +70,12 @@ public void houseType(){
     
   
     
-  Textarea titleTextArea, helpTextArea;
-  titleTextArea = cp5.addTextarea(fileName + "Title")
+  //Textarea titleTextArea, helpTextArea;
+  titleTextArea1 = cp5.addTextarea(fileName + "Title")
+    //.setColorBackground(windowBackground)
+    //.setColorActive(windowBackground)
+    //.setColorForeground(windowBackground)
+    .disableColorBackground()
     .setPosition(leftIndent, 20)
     .setSize(width-80, 100)
     .setLineHeight(72)
@@ -74,8 +84,13 @@ public void houseType(){
     .setText(titleText)
     .hideScrollbar()
     .moveTo(tabLabel)
+    .setUpdate(false)
     ;
-  helpTextArea = cp5.addTextarea(fileName + "HelpText")
+  helpTextArea1 = cp5.addTextarea(fileName + "HelpText")
+    //.setColorBackground(windowBackground)
+    //.setColorActive(windowBackground)
+    //.setColorForeground(windowBackground)
+    .disableColorBackground()
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
     .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
     .setLineHeight(72)
@@ -84,6 +99,7 @@ public void houseType(){
     .setText(helpText)
     .hideScrollbar()
     .moveTo(tabLabel)
+    .setUpdate(false)
     ;
     
 

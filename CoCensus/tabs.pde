@@ -27,9 +27,9 @@ public void tabs() {
   cc.pre(); // use post() to draw on top of existing controllers, pre() otherwise
   cp5.addCanvas(cc); 
   
-  cc3 = new MyCanvas3();
-  cc3.post(); // use post() to draw on top of existing controllers, pre() otherwise
-  cp5.addCanvas(cc3); 
+  //cc3 = new MyCanvas3();
+  //cc3.post(); // use post() to draw on top of existing controllers, pre() otherwise
+  //cp5.addCanvas(cc3); 
  
   // remove default tab
   cp5.getTab("default")
@@ -41,10 +41,10 @@ public void tabs() {
      .setArrayValue(tab1) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
-     //.setColorForeground(tabBackgroundActive)
-     .setColorForeground(tabBackground)
+     .setColorActive(tabBackgroundActive)
+     //.setColorActive(tabBackground)
+     .setColorForeground(tabBackgroundActive)
+     //.setColorForeground(tabBackground)
      .activateEvent(true)
      .setActive(true)
      .setWidth(tabWidth) 
@@ -60,10 +60,10 @@ public void tabs() {
      .setArrayValue(tab2) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
-     //.setColorForeground(tabBackgroundActive)
-    .setColorForeground(tabBackground) 
+     .setColorActive(tabBackgroundActive)
+     //.setColorActive(tabBackground)
+     .setColorForeground(tabBackgroundActive)
+     //.setColorForeground(tabBackground) 
      .activateEvent(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
@@ -78,10 +78,10 @@ public void tabs() {
      .setArrayValue(tab3) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
-     //.setColorForeground(tabBackgroundActive) 
-     .setColorForeground(tabBackground)
+     .setColorActive(tabBackgroundActive)
+     //.setColorActive(tabBackground)
+     .setColorForeground(tabBackgroundActive) 
+     //.setColorForeground(tabBackground)
      .activateEvent(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
@@ -96,10 +96,10 @@ public void tabs() {
      .setArrayValue(tab4) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
-     //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
-     //.setColorForeground(tabBackgroundActive) 
-     .setColorForeground(tabBackground)
+     .setColorActive(tabBackgroundActive)
+     //.setColorActive(tabBackground)
+     .setColorForeground(tabBackgroundActive) 
+     //.setColorForeground(tabBackground)
      .activateEvent(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
