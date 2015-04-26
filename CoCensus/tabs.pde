@@ -42,7 +42,7 @@ public void tabs() {
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
+     .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive)
      //.setColorForeground(tabBackground)
      .activateEvent(true)
@@ -61,7 +61,7 @@ public void tabs() {
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
+     .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive)
      //.setColorForeground(tabBackground) 
      .activateEvent(true)
@@ -79,7 +79,7 @@ public void tabs() {
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
+     .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive) 
      //.setColorForeground(tabBackground)
      .activateEvent(true)
@@ -97,7 +97,7 @@ public void tabs() {
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
-     .setColorActive(tabBackground)
+     .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive) 
      //.setColorForeground(tabBackground)
      .activateEvent(true)
@@ -253,7 +253,7 @@ class MyCanvas3 extends Canvas {
 
   public void draw(PApplet p) {
     
-    p.image(tabSel, tabCoordinates.x , tabCoordinates.y - 10);
+    p.image(tabSel, tabCoordinates.x , tabCoordinates.y - 12);
     //p.image(tabSel, tabCoordinates.x , tabCoordinates.y + 90);
     //background(windowBackground);
 

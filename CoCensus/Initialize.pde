@@ -27,7 +27,9 @@ color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(33, 120, 33);  // Green, option picked // old: 48, 191, 48
 
+color tabBackgroundSelect         = color(191, 78, 78);
 color tabBackgroundActiveSelect   = color(227, 151, 70);
+color tabBackgroundCompleteSelect = color(33, 150, 63);
 
 color windowBackground      = color(255);          // White 
 
@@ -35,14 +37,14 @@ color windowBackground      = color(255);          // White
 // Sizes
 int tabWidth      = 426;
 int tabWidthSmall = 96;
-int tabHeight     = 100;
+int tabHeight     = 135;
 
 int tabFontSize      = 40;
 int tabFontSizeSmall = 25;
 int tabFontSizeBig   = 50;
 
 // Positions
-int tabPositionY = 900;
+int tabPositionY = 880;
 
 // Fonts 
 // Note: Fonts need to be loaded within functions
