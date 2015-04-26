@@ -37,7 +37,7 @@ void IndustryHandler(int a) { // change name to be the same as fileName + Handle
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
     
-    industryAnswer.setText("");
+    industryAnswer.setText(industryArray[index]);
     cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
   }
   
