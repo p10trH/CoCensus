@@ -30,15 +30,15 @@ String householdSizeArray[] = new String[] {
   }; 
   
 String houseTypeArray[] = new String[] {
-    " detached one-family house",
-    " attached one-family house", 
-    "  2 apartment building", 
-    "  3-4 apartment building", 
-    "  5-9 apartment building", 
-    "  10-19 apartment building", 
-    "  20-49 apartment building", 
+    "    detached one-family house",
+    "     attached one-family house", 
+    "          2 apartment building", 
+    "        3-4 apartment building", 
+    "        5-9 apartment building", 
+    "      10-19 apartment building", 
+    "      20-49 apartment building", 
     "  50 or more apartment building", 
-    "boat, RV, van, mobile home, other"
+    " boat, RV, van, mobile, or other"
   };   
 
 
@@ -186,7 +186,7 @@ public void tabs() {
   houseTypeAnswer = cp5.addTextlabel("houseTypeAnswer")
                        .setText("")
                        .setMultiline(true) 
-                       .setPosition(tab2[0] + tabWidth/3 + 15, tabPositionY + tabHeight - 50)
+                       .setPosition(tab2[0], tabPositionY + tabHeight - 50)
                        .setWidth(tabWidth)
                        .setHeight(50)
                        .setColorBackground(255)
@@ -196,7 +196,7 @@ public void tabs() {
   industryAnswer = cp5.addTextlabel("industryAnswer")
                        .setText("")
                        .setMultiline(true) 
-                       .setPosition(tab3[0] + tabWidth/3 + 15, tabPositionY + tabHeight - 50)
+                       .setPosition(tab3[0], tabPositionY + tabHeight - 50)
                        .setWidth(tabWidth)
                        .setHeight(50)
                        .setColorBackground(255)

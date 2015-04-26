@@ -28,18 +28,23 @@ void IndustryHandler(int a) { // change name to be the same as fileName + Handle
   int index = a - 1; // subtracting one for array indexing
   if(a < 0){
    resultStr[tabIndex] = ""; // reset resultStr 
+   
+   industryAnswer.setText("");
+   cp5.getTab("Industry").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
   }
   else{
     resultStr[tabIndex] = finalStr[index];
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
+    
+    industryAnswer.setText("");
+    cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
   }
   
   // changes answered tab green
   //cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).update();
   
   // changes answered tab green
-  cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
  
   helpTextArea3.setColorBackground(windowBackground);
   titleTextArea3.setColorBackground(windowBackground);
