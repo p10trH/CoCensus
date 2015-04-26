@@ -14,6 +14,8 @@ float tab2[] = new float[] {tabWidthSmall + tabWidth + 8,tabPositionY};
 float tab3[] = new float[] {tabWidthSmall + 2 * tabWidth + 12,tabPositionY};
 float tab4[] = new float[] {tabWidthSmall + 3 * tabWidth + 16,tabPositionY};
 
+Textlabel householdSizeAnswer;
+
 
 // setup tabs
 public void tabs() {
@@ -143,9 +145,22 @@ public void tabs() {
      .setSize(tabFontSizeBig)
      .align(ControlP5.CENTER, ControlP5.CENTER)
      ; 
+     
+  // add results on tabs
+  
+  householdSizeAnswer = cp5.addTextlabel("householdSizeAnswer")
+                       .setText("")
+                       .setMultiline(true) 
+                       .setPosition(tab1[0] + tabWidth/3 + 15, tabPositionY + tabHeight - 50)
+                       .setWidth(tabWidth)
+                       .setHeight(50)
+                       .setColorBackground(255)
+                       .setFont(createFont("arial",30))
+                       ;
 
   cp5.getController("left").moveTo("global");
   cp5.getController("right").moveTo("global");
+  cp5.getController("householdSizeAnswer").moveTo("global");
   
 }
 

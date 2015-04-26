@@ -8,12 +8,12 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   int tabIndex = 1; // this is where we are storing the result of this tab into, should be unique for each tab
 
   String finalStr[] = new String[] {
-    "One", // Stored result values to be stored into resultStr  
-    "Two", 
-    "Three", 
-    "Four", 
-    "Five", 
-    "Six or more"
+    "    1", // Stored result values to be stored into resultStr  
+    "    2", 
+    "    3", 
+    "    4", 
+    "    5", 
+    "6 or more"
   }; 
   println("House: radio Button event: "+a);  // if you really want you can change the name of the tab
 
@@ -22,10 +22,17 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   int index = a - 1; // subtracting one for array indexing
   if (a < 0) {
     resultStr[tabIndex] = ""; // reset resultStr
-  } else {
+    
+    householdSizeAnswer.setText("");
+    cp5.getTab("Household Size").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
+  } 
+  else {
     resultStr[tabIndex] = finalStr[index];
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
+    
+    householdSizeAnswer.setText(resultStr[tabIndex]);
+    cp5.getTab("Household Size").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
   }
 
   // changes answered tab green
@@ -33,12 +40,11 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   //   .setColorBackground(tabBackgroundComplete);
   //   .setColorActive(tabBackground)
   //   .setColorForeground(tabBackground).update();
-  
-  // changes answered tab green
-  cp5.getTab("Household Size").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
- 
+
   helpTextArea2.setColorBackground(windowBackground);
   titleTextArea2.setColorBackground(windowBackground);
+  
+  //householdSizeAnswer.setText(
 }
 
 // Household Size button display
