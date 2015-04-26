@@ -8,11 +8,11 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   int tabIndex = 1; // this is where we are storing the result of this tab into, should be unique for each tab
 
   String finalStr[] = new String[] {
-    "    1", // Stored result values to be stored into resultStr  
-    "    2", 
-    "    3", 
-    "    4", 
-    "    5", 
+    "      1", // Stored result values to be stored into resultStr  
+    "      2", 
+    "      3", 
+    "      4", 
+    "      5", 
     "6 or more"
   }; 
   println("House: radio Button event: "+a);  // if you really want you can change the name of the tab
