@@ -32,9 +32,9 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
   // changes answered tab green
   cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
  
- 
   helpTextArea1.setColorBackground(windowBackground);
   titleTextArea1.setColorBackground(windowBackground);
+  //
 
 }
 

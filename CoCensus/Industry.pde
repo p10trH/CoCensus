@@ -1,4 +1,6 @@
 
+Textarea titleTextArea3, helpTextArea3;
+
 // Action handler
 void IndustryHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
   // Change these variables for each unique tab//////////////////////////////////////////////
@@ -35,6 +37,12 @@ void IndustryHandler(int a) { // change name to be the same as fileName + Handle
   
   // changes answered tab green
   //cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).update();
+  
+  // changes answered tab green
+  cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
+ 
+  helpTextArea3.setColorBackground(windowBackground);
+  titleTextArea3.setColorBackground(windowBackground);
 }
 
 // Household Size button display
@@ -67,8 +75,8 @@ public void industry(){
     defaultImgs[i] = loadImage(defaultStr);    
   }
   
-  Textarea titleTextArea, helpTextArea;
-  titleTextArea = cp5.addTextarea(fileName + "Title")
+  //Textarea titleTextArea, helpTextArea;
+  titleTextArea3 = cp5.addTextarea(fileName + "Title")
     .setPosition(leftIndent, 20)
     .setSize(width-80, 100)
     .setLineHeight(72)
@@ -78,7 +86,7 @@ public void industry(){
     .hideScrollbar()
     .moveTo(tabLabel)
     ;
-  helpTextArea = cp5.addTextarea(fileName + "HelpText")
+  helpTextArea3 = cp5.addTextarea(fileName + "HelpText")
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
     .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
     .setLineHeight(72)

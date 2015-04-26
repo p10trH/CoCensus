@@ -213,7 +213,7 @@ class MyCanvas extends Canvas {
 
   public void draw(PApplet p) {
     
-    p.image(tabImg, 0, tabPositionY);
+    //p.image(tabImg, 0, tabPositionY);
     
     /*
     for (int i = 20; i <= 45; i++) {

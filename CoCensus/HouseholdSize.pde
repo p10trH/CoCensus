@@ -1,4 +1,7 @@
 
+Textarea titleTextArea2, helpTextArea2;
+
+
 // Action handler
 void HouseHandler(int a) { // change name to be the same as fileName + Handler, in this case HouseHandler since fileName is "House"
   // Change these variables for each unique tab//////////////////////////////////////////////
@@ -30,6 +33,12 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   //   .setColorBackground(tabBackgroundComplete);
   //   .setColorActive(tabBackground)
   //   .setColorForeground(tabBackground).update();
+  
+  // changes answered tab green
+  cp5.getTab("Household Size").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
+ 
+  helpTextArea2.setColorBackground(windowBackground);
+  titleTextArea2.setColorBackground(windowBackground);
 }
 
 // Household Size button display
@@ -62,8 +71,8 @@ public void householdSize() {
     defaultImgs[i] = loadImage(defaultStr);
   }
 
-  Textarea titleTextArea, helpTextArea;
-  titleTextArea = cp5.addTextarea(fileName + "Title")
+  //Textarea titleTextArea, helpTextArea;
+  titleTextArea2 = cp5.addTextarea(fileName + "Title")
     .setPosition(leftIndent, 20)
       .setSize(width-80, 100)
         .setLineHeight(72)
@@ -74,7 +83,7 @@ public void householdSize() {
                   .moveTo(tabLabel)
                   .disableColorBackground()
                     ;
-  helpTextArea = cp5.addTextarea(fileName + "HelpText")
+  helpTextArea2 = cp5.addTextarea(fileName + "HelpText")
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
       .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
         .setLineHeight(72)
