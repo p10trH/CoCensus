@@ -15,6 +15,9 @@ float tab3[] = new float[] {tabWidthSmall + 2 * tabWidth + 12,tabPositionY};
 float tab4[] = new float[] {tabWidthSmall + 3 * tabWidth + 16,tabPositionY};
 
 Textlabel householdSizeAnswer;
+Textlabel houseTypeAnswer;
+Textlabel industryAnswer;
+Textlabel heritageAnswer;
 
 
 // setup tabs
@@ -157,10 +160,43 @@ public void tabs() {
                        .setColorBackground(255)
                        .setFont(createFont("arial",30))
                        ;
+                       
+  houseTypeAnswer = cp5.addTextlabel("houseTypeAnswer")
+                       .setText("")
+                       .setMultiline(true) 
+                       .setPosition(tab2[0] + tabWidth/3 + 15, tabPositionY + tabHeight - 50)
+                       .setWidth(tabWidth)
+                       .setHeight(50)
+                       .setColorBackground(255)
+                       .setFont(createFont("arial",30))
+                       ;
+  
+  industryAnswer = cp5.addTextlabel("industryAnswer")
+                       .setText("")
+                       .setMultiline(true) 
+                       .setPosition(tab3[0] + tabWidth/3 + 15, tabPositionY + tabHeight - 50)
+                       .setWidth(tabWidth)
+                       .setHeight(50)
+                       .setColorBackground(255)
+                       .setFont(createFont("arial",30))
+                       ;
+  
+  heritageAnswer = cp5.addTextlabel("heritageAnswer")
+                       .setText("")
+                       .setMultiline(true) 
+                       .setPosition(tab4[0] + tabWidth/3 + 15, tabPositionY + tabHeight - 50)
+                       .setWidth(tabWidth)
+                       .setHeight(50)
+                       .setColorBackground(255)
+                       .setFont(createFont("arial",30))
+                       ;                     
 
   cp5.getController("left").moveTo("global");
   cp5.getController("right").moveTo("global");
   cp5.getController("householdSizeAnswer").moveTo("global");
+  cp5.getController("houseTypeAnswer").moveTo("global");
+  cp5.getController("industryAnswer").moveTo("global");
+  cp5.getController("heritageAnswer").moveTo("global");
   
 }
 
