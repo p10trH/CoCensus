@@ -42,8 +42,8 @@ String houseTypeArray[] = new String[] {
   };   
   
 String industryArray[] = new String[] {
-    "   agriculture, forestry, fishing",
-    "                    mining", 
+    "    agriculture, forestry, fishing",
+    "                     mining", 
     "                construction", 
     "               manufacturing", 
     "               transportation", 
