@@ -22,15 +22,20 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
   int index = a - 1; // subtracting one for array indexing  
   if(a < 0){
     resultStr[tabIndex] = ""; // reset resultStr 
+    
+    houseTypeAnswer.setText("");
+    cp5.getTab("House Type").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
   }
   else{
     resultStr[tabIndex] = finalStr[index];
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
+    
+    houseTypeAnswer.setText(houseTypeArray[index]);
+    cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
   }
   
   // changes answered tab green
-  cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
  
   helpTextArea1.setColorBackground(windowBackground);
   titleTextArea1.setColorBackground(windowBackground);

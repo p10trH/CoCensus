@@ -28,6 +28,18 @@ String householdSizeArray[] = new String[] {
     "      5", 
     "6 or more"
   }; 
+  
+String houseTypeArray[] = new String[] {
+    " detached one-family house",
+    " attached one-family house", 
+    "  2 apartment building", 
+    "  3-4 apartment building", 
+    "  5-9 apartment building", 
+    "  10-19 apartment building", 
+    "  20-49 apartment building", 
+    "  50 or more apartment building", 
+    "boat, RV, van, mobile home, other"
+  };   
 
 
 // setup tabs
