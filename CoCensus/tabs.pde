@@ -20,6 +20,16 @@ Textlabel industryAnswer;
 Textlabel heritageAnswer;
 
 
+String householdSizeArray[] = new String[] {
+    "      1",
+    "      2", 
+    "      3", 
+    "      4", 
+    "      5", 
+    "6 or more"
+  }; 
+
+
 // setup tabs
 public void tabs() {
   
