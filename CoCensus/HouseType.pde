@@ -30,10 +30,11 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
   }
   
   // changes answered tab green
-  cp5.getTab("House Type").setColorBackground(tabBackgroundComplete);//.update();
-  //cp5.getWindow("House Type").setColorBackground(tabBackgroundComplete);//.update();
-  
+  cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);//.update();
+ 
+ 
   helpTextArea1.setColorBackground(windowBackground);
+  titleTextArea1.setColorBackground(windowBackground);
 
 }
 
@@ -75,7 +76,7 @@ public void houseType(){
     //.setColorBackground(windowBackground)
     //.setColorActive(windowBackground)
     //.setColorForeground(windowBackground)
-    .disableColorBackground()
+    //.disableColorBackground()
     .setPosition(leftIndent, 20)
     .setSize(width-80, 100)
     .setLineHeight(72)
@@ -90,7 +91,7 @@ public void houseType(){
     //.setColorBackground(windowBackground)
     //.setColorActive(windowBackground)
     //.setColorForeground(windowBackground)
-    .disableColorBackground()
+    //.disableColorBackground()
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
     .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
     .setLineHeight(72)
