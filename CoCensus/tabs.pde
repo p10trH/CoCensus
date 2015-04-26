@@ -42,20 +42,20 @@ String houseTypeArray[] = new String[] {
   };   
   
 String industryArray[] = new String[] {
-    " agriculture, forestry, fishing",
-    "            mining", 
-    "        construction", 
-    "        manufacturing", 
-    "        transportation", 
-    "       wholesale trade", 
-    "         retail trade", 
-    " finance, insurance, real estate", 
-    " business, scientific, management", 
-    "   health & social services", 
-    "     educational services", 
-    " arts, entertainment, hospitality", 
-    "     public administration", 
-    " communication, information, other"
+    "   agriculture, forestry, fishing",
+    "                    mining", 
+    "                construction", 
+    "               manufacturing", 
+    "               transportation", 
+    "              wholesale trade", 
+    "                 retail trade", 
+    "  finance, insurance, real estate", 
+    "   business, scientific, manage.", 
+    "       health & social services", 
+    "         educational services", 
+    "  arts, entertainment, hospitality", 
+    "          public administration", 
+    "    communication, info., other"
   }; 
 
 
