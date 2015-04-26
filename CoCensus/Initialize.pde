@@ -27,6 +27,8 @@ color tabBackground         = color(191, 48, 48);  // Red, no option picked
 color tabBackgroundActive   = color(227, 111, 30); // Orange, active tab
 color tabBackgroundComplete = color(33, 120, 33);  // Green, option picked // old: 48, 191, 48
 
+color tabBackgroundActiveSelect   = color(227, 151, 70);
+
 color windowBackground      = color(255);          // White 
 
 

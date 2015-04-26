@@ -122,8 +122,9 @@ public void tabs() {
      .setPosition(0,tabPositionY)
      .setSize(tabWidthSmall, tabHeight)
      .setLabel("<")
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive)
+     .setColorBackground(tabBackgroundActive)
+     .setColorActive(tabBackgroundActiveSelect)
+     .setColorForeground(tabBackgroundActiveSelect)
      .getCaptionLabel()
      .setFont(tabFont)
      .setSize(tabFontSizeBig)
@@ -134,8 +135,9 @@ public void tabs() {
      .setPosition(width - tabWidthSmall - 1,tabPositionY)
      .setSize(tabWidthSmall + 1, tabHeight)
      .setLabel(">")
-     .setColorActive(tabBackgroundActive)
-     .setColorForeground(tabBackgroundActive)
+     .setColorBackground(tabBackgroundActive)
+     .setColorActive(tabBackgroundActiveSelect)
+     .setColorForeground(tabBackgroundActiveSelect)
      .getCaptionLabel()
      .setFont(tabFont)
      .setSize(tabFontSizeBig)
@@ -252,7 +254,7 @@ class MyCanvas3 extends Canvas {
   public void draw(PApplet p) {
     
     p.image(tabSel, tabCoordinates.x , tabCoordinates.y - 10);
-    p.image(tabSel, tabCoordinates.x , tabCoordinates.y + 90);
+    //p.image(tabSel, tabCoordinates.x , tabCoordinates.y + 90);
     //background(windowBackground);
 
   }
