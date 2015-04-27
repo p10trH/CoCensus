@@ -5,6 +5,8 @@ Textlabel welcomeDisclaim;
 
 PFont welcomeFont;
 
+boolean aboutToggle = false;
+
 public void welcome() {
   
   welcomeFont = loadFont("Arial-BoldMT-78.vlw");
@@ -36,6 +38,7 @@ public void welcome() {
                        .setColorValue(0)
                        //.setFont(welcomeFont)
                        .setFont(createFont("arial",24))
+                       .hide()
                        ;
     
   cp7.addButton("createProfile")
@@ -50,6 +53,22 @@ public void welcome() {
      .setPosition(3*(width/4) - 300, height/2 - 298)
      .setImages(loadImage("presetProfile.png"), loadImage("presetProfileActive.png"), loadImage("presetProfileActive.png"))
      .updateSize()
+     ; 
+     
+  cp7.addButton("about")
+     .setCaptionLabel("About CoCensus") 
+     //.setPosition(270, 322)
+     .setSize(250,80)
+     .setPosition(width/2 - 125, 1000)
+     .setColorCaptionLabel(color(50, 50, 255))
+     .setColorBackground(color(255))
+     .setColorForeground(color(155))
+     .setColorActive(color(255))
+     .getCaptionLabel()
+     .setFont(createFont("arial",24))
+     .align(ControlP5.CENTER, ControlP5.CENTER)
+     //.setImages(loadImage("createProfile.png"), loadImage("createProfileActive.png"), loadImage("createProfileActive.png"))
+     //.updateSize()
      ; 
   
   
@@ -66,5 +85,24 @@ public void presetProfile(int theValue) {
   
   //cp7.hide();
   //cp5.show();
+  
+}
+
+public void about(int theValue) {
+  
+  if (aboutToggle) {
+    
+    welcomeDisclaim.hide();
+    
+    aboutToggle = false;
+    
+  }
+  else {
+    
+    welcomeDisclaim.show();
+    
+    aboutToggle = true;
+    
+  }
   
 }
