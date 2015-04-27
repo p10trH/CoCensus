@@ -241,7 +241,7 @@ public void tabs() {
 }
 
 public void left(int theValue) {
-  
+  cp10.hide();
   if (currentTab > 2 && currentTab <= 5) {
     
     currentTab--;
@@ -270,7 +270,7 @@ public void left(int theValue) {
 }
 
 public void right(int theValue) {
-  
+  cp10.hide();
   if (currentTab >= 2 && currentTab < 5) {
     
     currentTab++;

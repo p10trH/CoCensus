@@ -150,9 +150,9 @@ public void heritage() {
   String fileType = ".png"; // filetype extension
 
   String titleText = tabLabel;
-  String raceText = "How many people, including yourself, live in your household?";
-  String hispText = "hispanic and latino text";
-  String ancestryText = "ancestry text";
+  String raceText = "Do you identify with race?";
+  String hispText = "Do you identify with Hispanic, Latino?";
+  String ancestryText = "Do you identify with your ancestry?";
   // Formatting vars /////////////////////////////////////////////////////////
   int leftIndent = 20;
   int topIndent = 120;
@@ -409,6 +409,7 @@ void aRadioButton(int num){
     
     heritageAnswer.setText("");
     cp5.getTab("Heritage").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
+    cp10.hide();
   } 
   else {
     resultStr[tabIndex] = allAncestries[index];
@@ -417,6 +418,7 @@ void aRadioButton(int num){
     
     heritageAnswer.setText(ancestryArray[index]);
     cp5.getTab("Heritage").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
+    cp10.show();
   }
 
   // changes answered tab green
@@ -443,6 +445,7 @@ void hRadioButton(int num){
     
     heritageAnswer.setText("");
     cp5.getTab("Heritage").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
+    cp10.hide();
   } 
   else {
     resultStr[tabIndex] = allHispanics[index];
@@ -451,6 +454,7 @@ void hRadioButton(int num){
     
     heritageAnswer.setText(hispanicArray[index]);
     cp5.getTab("Heritage").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
+    cp10.show();
   }
 
   // changes answered tab green
@@ -474,6 +478,7 @@ void rRadioButton(int num){
     
     heritageAnswer.setText("");
     cp5.getTab("Heritage").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
+    cp10.hide();
   } 
   else {
     resultStr[tabIndex] = allRaces[index];
@@ -482,6 +487,7 @@ void rRadioButton(int num){
     
     heritageAnswer.setText(raceArray[index]);
     cp5.getTab("Heritage").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
+    cp10.show();
   }
 
   // changes answered tab green

@@ -18,6 +18,8 @@ ControlP5 cp5; // ControlP5 object // used for tabs
 ControlP5 cp6; // used for start screen
 ControlP5 cp7; // for welcome screen
 
+ControlP5 cp10; // testing button
+
 ControlWindow controlWindow; // adding graphics to tabs
 Canvas cc;
 
@@ -87,6 +89,7 @@ public void initialize() {
   
   cp5 = new ControlP5(this); 
   cp6 = new ControlP5(this); 
+  cp10 = new ControlP5(this);
   
   background(windowBackground);
  
@@ -97,12 +100,12 @@ public void initialize() {
   houseType();
   industry();
   heritage();
-  
+  nextButton();
   startScreen();
   welcome();
   
   cp5.hide();
   cp7.hide();
   cp9.hide();
-  
+  cp10.hide();
 }
