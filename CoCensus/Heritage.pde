@@ -68,7 +68,9 @@ public void heritage() {
   String fileType = ".png"; // filetype extension
 
   String titleText = tabLabel;
-  String helpText = "How many people, including yourself, live in your household?";
+  String raceText = "How many people, including yourself, live in your household?";
+  String hispText = "hispanic and latino text";
+  String ancestryText = "ancestry text";
   // Formatting vars /////////////////////////////////////////////////////////
   int leftIndent = 20;
   int topIndent = 120;
@@ -90,7 +92,7 @@ public void heritage() {
   }*/
 
   //Textarea titleTextArea, helpTextArea;
-  titleTextArea4 = cp9.addTextarea(fileName + "Title")
+  titleTextArea4 = cp5.addTextarea(fileName + "Title")
     .setPosition(leftIndent, 20)
       .setSize(width-80, 100)
         .setLineHeight(72)
@@ -101,32 +103,33 @@ public void heritage() {
                   .moveTo(tabLabel)
                   .disableColorBackground()
                     ;
-  helpTextArea4 = cp9.addTextarea(fileName + "HelpText")
+  /*helpTextArea4 = cp9.addTextarea(fileName + "HelpText1")
     .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
       .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
         .setLineHeight(72)
           .setColor(0)
             .setFont(helpFont)
-              .setText(helpText)
+              .setText("blah") //helpText
                 .hideScrollbar()
-                  .moveTo(tabLabel)
+                //  .moveTo(tabLabel)
                   .disableColorBackground()
-                    ;
+                    ;*/
 
   cp9.getTab("default")
-       .remove();
+       //.remove();
+       .hide();
        
   cp9.addTab("Race")
      //.setUpdate(true) 
-     .setArrayValue(tab1) 
+     //.setArrayValue(tab1) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
      .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive)
      //.setColorForeground(tabBackground)
-     .activateEvent(true)
-     .setActive(true)
+     //.activateEvent(true)
+     //.setActive(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
      .setId(10)
@@ -137,15 +140,15 @@ public void heritage() {
      ;     
   cp9.addTab("Hispanic and Latino")
      //.setUpdate(true) 
-     .setArrayValue(tab1) 
+     //.setArrayValue(tab1) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
      .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive)
      //.setColorForeground(tabBackground)
-     .activateEvent(true)
-     .setActive(true)
+     //.activateEvent(true)
+     //.setActive(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
      .setId(11)
@@ -156,15 +159,15 @@ public void heritage() {
      ; 
   cp9.addTab("Ancestry")
      //.setUpdate(true) 
-     .setArrayValue(tab1) 
+     //.setArrayValue(tab1) 
      .setColorBackground(tabBackground)
      .setColorLabel(color(255))
      //.setColorActive(tabBackgroundActive)
      .setColorActive(tabBackgroundSelect)
      .setColorForeground(tabBackgroundActive)
      //.setColorForeground(tabBackground)
-     .activateEvent(true)
-     .setActive(true)
+     //.activateEvent(true)
+     //.setActive(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
      .setId(12)
@@ -173,6 +176,41 @@ public void heritage() {
      .setSize(tabFontSize)
      .align(ControlP5.CENTER, ControlP5.CENTER)     
      ;      
+     
+     
+  helpTextArea4 = cp9.addTextarea(fileName + "Race")
+    .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+      .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+        .setLineHeight(72)
+          .setColor(0)
+            .setFont(helpFont)
+              .setText(raceText)
+                .hideScrollbar()
+                  .moveTo("Race")
+                  .disableColorBackground()
+                    ;
+  helpTextArea4 = cp9.addTextarea(fileName + "Hispanic and Latino")
+    .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+      .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+        .setLineHeight(72)
+          .setColor(0)
+            .setFont(helpFont)
+              .setText(hispText)
+                .hideScrollbar()
+                  .moveTo("Hispanic and Latino")
+                  .disableColorBackground()
+                    ;
+  helpTextArea4 = cp9.addTextarea(fileName + "Ancestry")
+    .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+      .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+        .setLineHeight(72)
+          .setColor(0)
+            .setFont(helpFont)
+              .setText(ancestryText)
+                .hideScrollbar()
+                  .moveTo("Ancestry")
+                  .disableColorBackground()
+                    ;
 /*
 
   RadioButton radioObj = cp5.addRadioButton(fileName+"Handler")
