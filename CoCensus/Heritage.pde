@@ -180,7 +180,7 @@ public void heritage() {
      
   helpTextArea4 = cp9.addTextarea(fileName + "Race")
     .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-      .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+      .setSize(width-(leftIndent + 800), height - (height - 880) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
         .setLineHeight(72)
           .setColor(0)
             .setFont(helpFont)
@@ -191,7 +191,7 @@ public void heritage() {
                     ;
   helpTextArea4 = cp9.addTextarea(fileName + "Hispanic and Latino")
     .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-      .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+      .setSize(width-(leftIndent + 800), height - (height - 880) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
         .setLineHeight(72)
           .setColor(0)
             .setFont(helpFont)
@@ -202,7 +202,7 @@ public void heritage() {
                     ;
   helpTextArea4 = cp9.addTextarea(fileName + "Ancestry")
     .setPosition(leftIndent + 800, topIndent)//(numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-      .setSize(width-(leftIndent + 800), height - (height - 900) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+      .setSize(width-(leftIndent + 800), height - (height - 880) - topIndent)//(numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
         .setLineHeight(72)
           .setColor(0)
             .setFont(helpFont)

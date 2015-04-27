@@ -93,7 +93,7 @@ public void industry(){
     ;
   helpTextArea3 = cp5.addTextarea(fileName + "HelpText")
     .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-    .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 900) - topIndent)
+    .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 880) - topIndent)
     .setLineHeight(72)
     .setColor(0)
     .setFont(helpFont)
