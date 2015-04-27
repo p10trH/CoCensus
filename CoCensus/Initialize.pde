@@ -96,7 +96,7 @@ public void initialize() {
   householdSize();
   houseType();
   industry();
-  //heritage();
+  heritage();
   
   startScreen();
   welcome();
