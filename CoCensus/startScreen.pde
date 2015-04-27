@@ -15,7 +15,8 @@ public void startScreen() {
   //cp6.setImage(loadImage("circle.png"));
   
   cp6.addButton("startButton")
-     .setPosition(700, 270)
+     //.setPosition(700, 270)
+     .setPosition(width/2 - 300, height/2 - 298)
      .setImages(loadImage("startButtonDefault.png"), loadImage("startButtonActive.png"), loadImage("startButtonActive.png"))
      .updateSize()
      ; 

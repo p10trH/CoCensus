@@ -39,13 +39,15 @@ public void welcome() {
                        ;
     
   cp7.addButton("createProfile")
-     .setPosition(270, 322)
+     //.setPosition(270, 322)
+     .setPosition(width/4 - 300, height/2 - 298)
      .setImages(loadImage("createProfile.png"), loadImage("createProfileActive.png"), loadImage("createProfileActive.png"))
      .updateSize()
      ; 
      
   cp7.addButton("presetProfile")
-     .setPosition(1230, 322)
+     //.setPosition(1230, 322)
+     .setPosition(3*(width/4) - 300, height/2 - 298)
      .setImages(loadImage("presetProfile.png"), loadImage("presetProfileActive.png"), loadImage("presetProfileActive.png"))
      .updateSize()
      ; 
