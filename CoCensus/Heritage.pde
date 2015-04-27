@@ -113,7 +113,9 @@ public void heritage() {
                   .disableColorBackground()
                     ;
 
-
+  cp9.getTab("default")
+       .remove();
+       
   cp9.addTab("Race")
      //.setUpdate(true) 
      .setArrayValue(tab1) 
@@ -127,12 +129,50 @@ public void heritage() {
      .setActive(true)
      .setWidth(tabWidth) 
      .setHeight(tabHeight)
-     .setId(2)
+     .setId(10)
      .getCaptionLabel()
      .setFont(tabFont)
      .setSize(tabFontSize)
      .align(ControlP5.CENTER, ControlP5.CENTER)     
-     ;                    
+     ;     
+  cp9.addTab("Hispanic and Latino")
+     //.setUpdate(true) 
+     .setArrayValue(tab1) 
+     .setColorBackground(tabBackground)
+     .setColorLabel(color(255))
+     //.setColorActive(tabBackgroundActive)
+     .setColorActive(tabBackgroundSelect)
+     .setColorForeground(tabBackgroundActive)
+     //.setColorForeground(tabBackground)
+     .activateEvent(true)
+     .setActive(true)
+     .setWidth(tabWidth) 
+     .setHeight(tabHeight)
+     .setId(11)
+     .getCaptionLabel()
+     .setFont(tabFont)
+     .setSize(tabFontSize)
+     .align(ControlP5.CENTER, ControlP5.CENTER)     
+     ; 
+  cp9.addTab("Ancestry")
+     //.setUpdate(true) 
+     .setArrayValue(tab1) 
+     .setColorBackground(tabBackground)
+     .setColorLabel(color(255))
+     //.setColorActive(tabBackgroundActive)
+     .setColorActive(tabBackgroundSelect)
+     .setColorForeground(tabBackgroundActive)
+     //.setColorForeground(tabBackground)
+     .activateEvent(true)
+     .setActive(true)
+     .setWidth(tabWidth) 
+     .setHeight(tabHeight)
+     .setId(12)
+     .getCaptionLabel()
+     .setFont(tabFont)
+     .setSize(tabFontSize)
+     .align(ControlP5.CENTER, ControlP5.CENTER)     
+     ;      
 /*
 
   RadioButton radioObj = cp5.addRadioButton(fileName+"Handler")
