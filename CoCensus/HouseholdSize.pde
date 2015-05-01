@@ -25,7 +25,7 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
     
     householdSizeAnswer.setText("");
     cp5.getTab("Household Size").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
-    cp10.hide();
+    ////////cp10.hide();
   } 
   else {
     resultStr[tabIndex] = finalStr[index];
@@ -34,7 +34,7 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
     
     householdSizeAnswer.setText(householdSizeArray[index]);
     cp5.getTab("Household Size").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
-    cp10.show();
+    ////////cp10.show();
   }
 
   // changes answered tab green

@@ -409,7 +409,7 @@ void aRadioButton(int num){
     
     heritageAnswer.setText("");
     cp5.getTab("Heritage").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
-    cp10.hide();
+    ////////cp10.hide();
   } 
   else {
     resultStr[tabIndex] = allAncestries[index];
@@ -418,7 +418,7 @@ void aRadioButton(int num){
     
     heritageAnswer.setText(ancestryArray[index]);
     cp5.getTab("Heritage").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
-    cp10.show();
+    ////////cp10.show();
   }
 
   // changes answered tab green
@@ -445,7 +445,7 @@ void hRadioButton(int num){
     
     heritageAnswer.setText("");
     cp5.getTab("Heritage").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
-    cp10.hide();
+    ////////cp10.hide();
   } 
   else {
     resultStr[tabIndex] = allHispanics[index];
@@ -454,7 +454,7 @@ void hRadioButton(int num){
     
     heritageAnswer.setText(hispanicArray[index]);
     cp5.getTab("Heritage").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
-    cp10.show();
+    ////////cp10.show();
   }
 
   // changes answered tab green
@@ -478,7 +478,7 @@ void rRadioButton(int num){
     
     heritageAnswer.setText("");
     cp5.getTab("Heritage").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
-    cp10.hide();
+    ////////cp10.hide();
   } 
   else {
     resultStr[tabIndex] = allRaces[index];
@@ -487,7 +487,7 @@ void rRadioButton(int num){
     
     heritageAnswer.setText(raceArray[index]);
     cp5.getTab("Heritage").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
-    cp10.show();
+    ////////cp10.show();
   }
 
   // changes answered tab green

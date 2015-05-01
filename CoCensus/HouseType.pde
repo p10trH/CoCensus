@@ -25,7 +25,7 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
     
     houseTypeAnswer.setText("");
     cp5.getTab("House Type").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
-    cp10.hide();
+    ////////cp10.hide();
   }
   else{
     resultStr[tabIndex] = finalStr[index];
@@ -34,7 +34,7 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
     
     houseTypeAnswer.setText(houseTypeArray[index]);
     cp5.getTab("House Type").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
-    cp10.show();
+    ////////cp10.show();
   }
   
   // changes answered tab green

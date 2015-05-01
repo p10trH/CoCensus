@@ -31,7 +31,7 @@ void IndustryHandler(int a) { // change name to be the same as fileName + Handle
    
    industryAnswer.setText("");
    cp5.getTab("Industry").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
-   cp10.hide();
+   //////cp10.hide();
   }
   else{
     resultStr[tabIndex] = finalStr[index];
@@ -40,7 +40,7 @@ void IndustryHandler(int a) { // change name to be the same as fileName + Handle
     
     industryAnswer.setText(industryArray[index]);
     cp5.getTab("Industry").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
-    cp10.show();
+    //////cp10.show();
   }
   
   // changes answered tab green
