@@ -216,7 +216,7 @@ for (int i=0; i<colorCol;i++){
    .setImages(controlDefault[1], controlDefault[1], controlActive[1])
    //.setImages(loadImage("finishDefault_but.png"), loadImage("finishDefault_but.png"), loadImage("finishActive_but.png"))
    .updateSize();
-   :  
+   ;
  } 
  
 void draw (){
