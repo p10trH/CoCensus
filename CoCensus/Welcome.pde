@@ -7,11 +7,20 @@ PFont welcomeFont;
 
 boolean aboutToggle = false;
 
+Canvas ccWelcome;
+
+PImage welcomeScreenBackground;
+
 public void welcome() {
+  
+  cp7 = new ControlP5(this);
+ 
+  ccWelcome = new MyCanvasWelcome();
+  ccWelcome.pre(); // use post() to draw on top of existing controllers, pre() otherwise
+  cp7.addCanvas(ccWelcome); // add the canvas to cp5
   
   welcomeFont = loadFont("Arial-BoldMT-78.vlw");
   
-  cp7 = new ControlP5(this);
   
   welcomeTitle = cp7.addTextlabel("welcome")
                     .setText("Welcome to CoCensus!")
@@ -71,7 +80,6 @@ public void welcome() {
      //.updateSize()
      ; 
   
-  
 }
 
 public void createProfile(int theValue) {
@@ -105,4 +113,26 @@ public void about(int theValue) {
     
   }
   
+}
+
+class MyCanvasWelcome extends Canvas {
+
+  public void setup(PApplet theApplet) {
+    
+    welcomeScreenBackground = loadImage("newYorkTrans.png");
+    //image(startScreenBackground,0,0);
+    
+  }  
+
+  public void draw(PApplet p) {
+    
+    image(welcomeScreenBackground,0,0);
+    // renders a square with randomly changing colors
+    // make changes here.
+    //p.fill(100);
+    //p.rect(p.mouseX-20, y-20, 240, 30);
+    //p.fill(255);
+    //p.text("This text is drawn by MyCanvas", p.mouseX,y);
+    //p.text("This text is drawn by MyCanvas", p.mouseX,y);
+  }
 }
