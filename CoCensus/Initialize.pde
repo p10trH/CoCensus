@@ -55,46 +55,46 @@ PFont startFont;
 
 // Some other fonts for pages
 
-PFont titleFont = createFont("Arial",72,true); // use true/false for smooth/no-smooth
-PFont helpFont = createFont("Arial",55,true); // use true/false for smooth/no-smooth
+PFont titleFont = createFont("Arial", 72, true); // use true/false for smooth/no-smooth
+PFont helpFont = createFont("Arial", 55, true); // use true/false for smooth/no-smooth
 
 
 // Call this method once from main setup (CoCensus).
 // This method will call other methods in this file to
 // to finish setup.
 public void initialize() {
-  
-//////////// Result string "initialization"
-    resultStr = new String[12];      // result string storing answers as strings
-    resultFloat   = new float[12];   // float array storing answers as floats to send to the server (as the original CoCensus program) 
+
+  //////////// Result string "initialization"
+  resultStr = new String[12];      // result string storing answers as strings
+  resultFloat   = new float[12];   // float array storing answers as floats to send to the server (as the original CoCensus program) 
 
   // sending string from oroginal CoCensus program...Just the kiosk string for now, there's a second "logString" that is similar
   /*String kioskString = "http://192.168.1.10//kiosk.php?NEW
-     &ancestry="        +ancFloatVal +    // 0  - Ancestry result
-    "&hhSizeFloatVal="  +hhSizeFloatVal+  // 1  - Household size result
-    "&indFloatVal="     +indFloatVal+     // 2  - Industry result
-    "&houseFloatVal="   +houseFloatVal+   // 3  - House type result
-    "&red="             +r+               // 4  - Avatar
-    "&green="           +g+               // 5  - Avatar
-    "&blue="            +b+               // 6  - Avatar
-    "&tagID="           +tagString+       // 7  - RFID tag number
-    "&type="            +typeString+      // 8  - Celebrity name or custom
-    "&mouth="           +mouthInt+        // 9  - Avatar
-    "&eyes="            +eyesInt+         // 10 - Avatar
-    "&nose="            +noseInt          // 11 - Avatar
-    ;*/
-    
+   &ancestry="        +ancFloatVal +    // 0  - Ancestry result
+   "&hhSizeFloatVal="  +hhSizeFloatVal+  // 1  - Household size result
+   "&indFloatVal="     +indFloatVal+     // 2  - Industry result
+   "&houseFloatVal="   +houseFloatVal+   // 3  - House type result
+   "&red="             +r+               // 4  - Avatar
+   "&green="           +g+               // 5  - Avatar
+   "&blue="            +b+               // 6  - Avatar
+   "&tagID="           +tagString+       // 7  - RFID tag number
+   "&type="            +typeString+      // 8  - Celebrity name or custom
+   "&mouth="           +mouthInt+        // 9  - Avatar
+   "&eyes="            +eyesInt+         // 10 - Avatar
+   "&nose="            +noseInt          // 11 - Avatar
+   ;*/
+
   size(1920, 1080);
   noStroke();
-  
+
   cp5 = new ControlP5(this); 
   cp6 = new ControlP5(this); 
   //cp10 = new ControlP5(this);
-  
+
   background(windowBackground);
- 
- // -------------------------- //
-  
+
+  // -------------------------- //
+
   tabs();
   householdSize();
   houseType();
@@ -104,9 +104,10 @@ public void initialize() {
   //nextButton();
   startScreen();
   welcome();
-  
+
   cp5.hide();
   cp7.hide();
   //cp9.hide();
   ////////cp10.hide();
 }
+

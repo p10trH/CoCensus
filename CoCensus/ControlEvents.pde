@@ -16,12 +16,21 @@ void controlEvent(ControlEvent theControlEvent) {
       tabCoordinates.x = theControlEvent.getTab().getArrayValue()[0];
       //tabCoordinates.y = theControlEvent.getTab().getArrayValue()[1];
 
-
       //show/hide tabs within heritage
       if (cp5.getTab("Heritage").getId() == currentTab) {
 
+        if (aButtonPressed == 1) {
+
+          r.show();
+          h.show();
+          a.show();
+        }
         //cp9.show();
       } else {
+
+        r.hide();
+        h.hide();
+        a.hide();
 
         //cp9.hide();
       }

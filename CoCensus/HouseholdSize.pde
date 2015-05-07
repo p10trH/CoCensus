@@ -22,16 +22,15 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   int index = a - 1; // subtracting one for array indexing
   if (a < 0) {
     resultStr[tabIndex] = ""; // reset resultStr
-    
+
     householdSizeAnswer.setText("");
     cp5.getTab("Household Size").setColorBackground(tabBackground).setColorActive(tabBackgroundSelect);
     ////////cp10.hide();
-  } 
-  else {
+  } else {
     resultStr[tabIndex] = finalStr[index];
     resultFloat[tabIndex] = a;
     println("ResultStr: " + resultStr[tabIndex] + " ResultFloat: " + resultFloat[tabIndex]);
-    
+
     householdSizeAnswer.setText(householdSizeArray[index]);
     cp5.getTab("Household Size").setColorBackground(tabBackgroundComplete).setColorActive(tabBackgroundComplete);
     ////////cp10.show();
@@ -45,7 +44,7 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
 
   helpTextArea2.setColorBackground(windowBackground);
   //titleTextArea2.setColorBackground(windowBackground);
-  
+
   //householdSizeAnswer.setText(
 }
 
@@ -102,8 +101,8 @@ public void householdSize() {
               .setText(helpText)
                 .hideScrollbar()
                   .moveTo(tabLabel)
-                  .disableColorBackground()
-                    ;
+                    .disableColorBackground()
+                      ;
 
 
   RadioButton radioObj = cp5.addRadioButton(fileName+"Handler")
