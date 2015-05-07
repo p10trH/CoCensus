@@ -40,7 +40,7 @@ void HouseTypeHandler(int a) { // change name to be the same as fileName + Handl
   // changes answered tab green
  
   helpTextArea1.setColorBackground(windowBackground);
-  titleTextArea1.setColorBackground(windowBackground);
+  //titleTextArea1.setColorBackground(windowBackground);
   //
 
 }
@@ -79,35 +79,36 @@ public void houseType(){
   
     
   //Textarea titleTextArea, helpTextArea;
-  titleTextArea1 = cp5.addTextarea(fileName + "Title")
+  //titleTextArea1 = cp5.addTextarea(fileName + "Title")
     //.setColorBackground(windowBackground)
     //.setColorActive(windowBackground)
     //.setColorForeground(windowBackground)
     //.disableColorBackground()
-    .setPosition(leftIndent, 20)
-    .setSize(width-80, 100)
-    .setLineHeight(72)
-    .setColor(0)
-    .setFont(titleFont)
-    .setText(titleText)
-    .hideScrollbar()
-    .moveTo(tabLabel)
-    .setUpdate(false)
-    ;
+  //  .setPosition(leftIndent, 20)
+  //  .setSize(width-80, 100)
+  //  .setLineHeight(72)
+  //  .setColor(0)
+  //  .setFont(titleFont)
+  //  .setText(titleText)
+  //  .hideScrollbar()
+  //  .moveTo(tabLabel)
+  //  .setUpdate(false)
+  //  ;
   helpTextArea1 = cp5.addTextarea(fileName + "HelpText")
     //.setColorBackground(windowBackground)
     //.setColorActive(windowBackground)
     //.setColorForeground(windowBackground)
     //.disableColorBackground()
-    .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-    .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 880) - topIndent)
+    //.setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+    .setPosition(20, 20)
+    //.setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 880) - topIndent)
+    .setSize(1880, 100)
     .setLineHeight(72)
     .setColor(0)
     .setFont(helpFont)
     .setText(helpText)
     .hideScrollbar()
     .moveTo(tabLabel)
-    .setUpdate(false)
     ;
     
 

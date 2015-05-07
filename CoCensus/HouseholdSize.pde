@@ -44,7 +44,7 @@ void HouseHandler(int a) { // change name to be the same as fileName + Handler, 
   //   .setColorForeground(tabBackground).update();
 
   helpTextArea2.setColorBackground(windowBackground);
-  titleTextArea2.setColorBackground(windowBackground);
+  //titleTextArea2.setColorBackground(windowBackground);
   
   //householdSizeAnswer.setText(
 }
@@ -80,20 +80,22 @@ public void householdSize() {
   }
 
   //Textarea titleTextArea, helpTextArea;
-  titleTextArea2 = cp5.addTextarea(fileName + "Title")
-    .setPosition(leftIndent, 20)
-      .setSize(width-80, 100)
-        .setLineHeight(72)
-          .setColor(0)
-            .setFont(titleFont)
-              .setText(titleText)
-                .hideScrollbar()
-                  .moveTo(tabLabel)
-                  .disableColorBackground()
-                    ;
+  //titleTextArea2 = cp5.addTextarea(fileName + "Title")
+  //  .setPosition(leftIndent, 20)
+  //    .setSize(width-80, 100)
+  //      .setLineHeight(72)
+  //        .setColor(0)
+  //          .setFont(titleFont)
+  //            .setText(titleText)
+  //              .hideScrollbar()
+  //                .moveTo(tabLabel)
+  //                .disableColorBackground()
+  //                  ;
   helpTextArea2 = cp5.addTextarea(fileName + "HelpText")
-    .setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
-      .setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 880) - topIndent)
+    //.setPosition(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing)), topIndent)
+    .setPosition(20, 20)
+      //.setSize(width-(leftIndent + (numCols *(defaultImgs[0].width + horizSpacing))), height - (height - 880) - topIndent)
+      .setSize(1880, 100)
         .setLineHeight(72)
           .setColor(0)
             .setFont(helpFont)
