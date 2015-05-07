@@ -5,15 +5,25 @@ RadioButton r;
 RadioButton h;
 RadioButton a;
 
+int showBox = 0;
+
 int aButtonPressed = 0;
 
 PFont sfont;
 
 ControlP5 cp20;
 
+Canvas ccHer;
+
 public void heritageAlt() {
 
   cp20 = new ControlP5(this); 
+  
+  ccHer = new MyCanvasHer();
+  ccHer.pre(); // use post() to draw on top of existing controllers, pre() otherwise
+  cp20.addCanvas(ccHer); 
+  
+  //ccHer.moveTo("Heritage");
 
   String fileName = "Heritage";
 
@@ -40,40 +50,46 @@ public void heritageAlt() {
 
   //480
   cp5.addButton("Ancestry")
-    .setPosition(330, 300)
-      .setSize(300, 300)
+    .setPosition(320, 300)
+      //.setSize(300, 300)
+      .setImages(loadImage("ancestry.png"), loadImage("ancestryActive.png"), loadImage("ancestryActive.png"))
+        .updateSize()
         //.setLabel("<")
-        .setColorBackground(tabBackgroundActive)
-          .setColorActive(tabBackgroundActiveSelect)
-            .setColorForeground(tabBackgroundActiveSelect)
-              .getCaptionLabel()
-                .setFont(tabFont)
-                  .setSize(tabFontSizeSmall)
-                    .align(ControlP5.CENTER, ControlP5.CENTER)
+        //.setColorBackground(tabBackgroundActive)
+        //  .setColorActive(tabBackgroundActiveSelect)
+        //    .setColorForeground(tabBackgroundActiveSelect)
+        //      .getCaptionLabel()
+        //        .setFont(tabFont)
+        //          .setSize(tabFontSizeSmall)
+        //            .align(ControlP5.CENTER, ControlP5.CENTER)
                       ; 
   cp5.addButton("Race")
-    .setPosition(810, 300)
-      .setSize(300, 300)
+    .setPosition(800, 300)
+      //.setSize(300, 300)
+      .setImages(loadImage("race.png"), loadImage("raceActive.png"), loadImage("raceActive.png"))
+        .updateSize()
         //.setLabel("<")
-        .setColorBackground(tabBackgroundActive)
-          .setColorActive(tabBackgroundActiveSelect)
-            .setColorForeground(tabBackgroundActiveSelect)
-              .getCaptionLabel()
-                .setFont(tabFont)
-                  .setSize(tabFontSizeSmall)
-                    .align(ControlP5.CENTER, ControlP5.CENTER)
+        //.setColorBackground(tabBackgroundActive)
+        //  .setColorActive(tabBackgroundActiveSelect)
+        //    .setColorForeground(tabBackgroundActiveSelect)
+        //      .getCaptionLabel()
+        //        .setFont(tabFont)
+        //          .setSize(tabFontSizeSmall)
+        //            .align(ControlP5.CENTER, ControlP5.CENTER)
                       ; 
   cp5.addButton("Hispanic")
-    .setPosition(1290, 300)
-      .setSize(300, 300)
+    .setPosition(1280, 300)
+      //.setSize(300, 300)
+      .setImages(loadImage("hispanic.png"), loadImage("hispanicActive.png"), loadImage("hispanicActive.png"))
+        .updateSize()
         //.setLabel("<")
-        .setColorBackground(tabBackgroundActive)
-          .setColorActive(tabBackgroundActiveSelect)
-            .setColorForeground(tabBackgroundActiveSelect)
-              .getCaptionLabel()
-                .setFont(tabFont)
-                  .setSize(tabFontSizeSmall)
-                    .align(ControlP5.CENTER, ControlP5.CENTER)
+        //.setColorBackground(tabBackgroundActive)
+        //  .setColorActive(tabBackgroundActiveSelect)
+        //    .setColorForeground(tabBackgroundActiveSelect)
+        //      .getCaptionLabel()
+        //        .setFont(tabFont)
+        //          .setSize(tabFontSizeSmall)
+        //            .align(ControlP5.CENTER, ControlP5.CENTER)
                       ; 
 
   cp5.getController("Ancestry").moveTo("Heritage");
@@ -347,4 +363,59 @@ void rRadioButton(int num) {
   a.deactivateAll();
   h.deactivateAll();
 }
+
+
+
+class MyCanvasHer extends Canvas {
+
+
+  public void setup(PApplet theApplet) {
+
+    box1 = loadImage("ancestryBox.png");
+    box2 = loadImage("raceBox.png");
+    box3 = loadImage("hispanicBox.png");
+  }  
+
+  public void draw(PApplet p) {
+
+    //p.image(tabImg, 0, tabPositionY);
+
+//fill(100);
+
+    if (aButtonPressed == 1 && showBox == 1)
+      p.image(box1, 800, 100);
+    else if (aButtonPressed == 2 && showBox == 1)
+      p.image(box2, 800, 100);
+    else if (aButtonPressed == 3 && showBox == 1)
+     p.image(box3, 800, 100);
+      //rect(800, 100, 900, 700);
+
+
+    /*
+    for (int i = 20; i <= 45; i++) {
+     p.fill(0, 0, 0, 10);
+     
+     p.rect(0, tabPositionY + 10, width, tabHeight - 50);
+     p.rect(0, tabPositionY + tabHeight - 40, width, (tabHeight / 50) * i); 
+     
+     p.fill(255, 255, 255, 3);
+     p.rect(tabWidthSmall, tabPositionY + 10, 4, tabHeight - 50);
+     p.rect(tabWidthSmall, tabPositionY + tabHeight - 40, 4, (tabHeight / 50) * i); 
+     
+     p.rect(width - tabWidthSmall - 5, tabPositionY + 10, 4, tabHeight - 50);
+     p.rect(width - tabWidthSmall - 5, tabPositionY + tabHeight - 40, 4, (tabHeight / 50) * i); 
+     
+     p.rect(tabWidthSmall + tabWidth + 7, tabPositionY + 10, 1, tabHeight - 50);
+     p.rect(tabWidthSmall + tabWidth + 7, tabPositionY + tabHeight - 40, 1, (tabHeight / 50) * i); 
+     
+     p.rect(tabWidthSmall + 2 * tabWidth + 11, tabPositionY + 10, 1, tabHeight - 50);
+     p.rect(tabWidthSmall + 2 * tabWidth + 11, tabPositionY + tabHeight - 40, 1, (tabHeight / 50) * i); 
+     
+     p.rect(tabWidthSmall + 3 * tabWidth + 15, tabPositionY + 10, 1, tabHeight - 50);
+     p.rect(tabWidthSmall + 3 * tabWidth + 15, tabPositionY + tabHeight - 40, 1, (tabHeight / 50) * i);   
+     }
+     */
+  }
+}
+
 

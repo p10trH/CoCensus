@@ -1,5 +1,8 @@
 
 PImage tabImg;
+PImage box1;
+PImage box2;
+PImage box3;
 PImage tabSel;
 
 int currentTab = 2;
@@ -259,6 +262,7 @@ public void left(int theValue) {
       r.hide();
       h.hide();
       a.hide();
+      showBox = 0;
       //cp9.hide();
     } else if (cp5.getTab("House Type").getId() == currentTab) {
       cp5.getTab("House Type").bringToFront();
@@ -267,6 +271,7 @@ public void left(int theValue) {
       r.hide();
       h.hide();
       a.hide();
+      showBox = 0;
     } else if (cp5.getTab("Industry").getId() == currentTab) {
       cp5.getTab("Industry").bringToFront();
       tabCoordinates.x = cp5.getTab("Industry").getArrayValue()[0];
@@ -274,6 +279,7 @@ public void left(int theValue) {
       r.hide();
       h.hide();
       a.hide();
+      showBox = 0;
     } else if (cp5.getTab("Heritage").getId() == currentTab) {
       cp5.getTab("Heritage").bringToFront();
       tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
@@ -284,6 +290,9 @@ public void left(int theValue) {
         r.show();
       else if (aButtonPressed == 3)
         h.show();
+        
+        
+        showBox = 1;
     }
   }
 }
@@ -300,6 +309,7 @@ public void right(int theValue) {
       r.hide();
       h.hide();
       a.hide();
+      showBox = 0;
       //cp9.hide();
     } else if (cp5.getTab("House Type").getId() == currentTab) {
       cp5.getTab("House Type").bringToFront();
@@ -307,6 +317,7 @@ public void right(int theValue) {
       r.hide();
       h.hide();
       a.hide();
+      showBox = 0;
       //cp9.hide();
     } else if (cp5.getTab("Industry").getId() == currentTab) {
       cp5.getTab("Industry").bringToFront();
@@ -314,6 +325,7 @@ public void right(int theValue) {
       r.hide();
       h.hide();
       a.hide();
+      showBox = 0;
       //cp9.hide();
     } else if (cp5.getTab("Heritage").getId() == currentTab) {
       cp5.getTab("Heritage").bringToFront();
@@ -325,6 +337,8 @@ public void right(int theValue) {
         r.show();
       else if (aButtonPressed == 3)
         h.show();
+        
+        showBox = 1;
       //cp9.show();
     }
   }
@@ -345,14 +359,6 @@ class MyCanvas extends Canvas {
 
     p.image(tabImg, 0, tabPositionY);
 
-fill(100);
-
-    if (aButtonPressed == 1)
-      rect(800, 100, 900, 700);
-    else if (aButtonPressed == 2)
-      rect(800, 100, 900, 700);
-    else if (aButtonPressed == 3)
-      rect(800, 100, 900, 700);
 
 
     /*
