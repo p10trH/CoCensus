@@ -1,17 +1,6 @@
 
 Textarea titleTextArea4, helpTextArea4;
 
-String heritageArray[] = new String[] {
-    "    detached one-family house",
-    "     attached one-family house", 
-    "          2 apartment building", 
-    "        3-4 apartment building", 
-    "        5-9 apartment building", 
-    "      10-19 apartment building", 
-    "      20-49 apartment building", 
-    "  50 or more apartment building", 
-    " boat, RV, van, mobile, or other"
-  }; 
 String ancestryArray[] = new String[] {
     "                  American",
     "                     Dutch",
@@ -89,6 +78,7 @@ String[] allHispanics = {
   "Mexican, Mexican American","Puerto Rican","Cuban","another Hispanic, Latino, or Spanish origin"
 };
   
+  
   PFont sfont;
 ControlP5 cp9;
 // Action handler
@@ -131,6 +121,7 @@ ControlP5 cp9;
   
   //householdSizeAnswer.setText(
 }*/
+
 RadioButton r;
 RadioButton h;
 RadioButton a;

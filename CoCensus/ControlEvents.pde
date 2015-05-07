@@ -20,10 +20,10 @@ void controlEvent(ControlEvent theControlEvent) {
       //show/hide tabs within heritage
       if (cp5.getTab("Heritage").getId() == currentTab) {
 
-        cp9.show();
+        //cp9.show();
       } else {
 
-        cp9.hide();
+        //cp9.hide();
       }
     }
   }

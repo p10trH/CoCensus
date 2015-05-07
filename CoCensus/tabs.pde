@@ -249,22 +249,22 @@ public void left(int theValue) {
     if (cp5.getTab("Household Size").getId() == currentTab){
        cp5.getTab("Household Size").bringToFront();
        tabCoordinates.x = cp5.getTab("Household Size").getArrayValue()[0];
-       cp9.hide();
+       //cp9.hide();
     }
     else if (cp5.getTab("House Type").getId() == currentTab){
        cp5.getTab("House Type").bringToFront();
        tabCoordinates.x = cp5.getTab("House Type").getArrayValue()[0];
-       cp9.hide();
+       //cp9.hide();
     }
     else if (cp5.getTab("Industry").getId() == currentTab){
        cp5.getTab("Industry").bringToFront();
        tabCoordinates.x = cp5.getTab("Industry").getArrayValue()[0];
-       cp9.hide();
+       //cp9.hide();
     }
     else if (cp5.getTab("Heritage").getId() == currentTab){
        cp5.getTab("Heritage").bringToFront();
        tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
-       cp9.show();
+       //cp9.show();
     }
   }
 }
@@ -278,22 +278,22 @@ public void right(int theValue) {
     if (cp5.getTab("Household Size").getId() == currentTab){
        cp5.getTab("Household Size").bringToFront();
        tabCoordinates.x = cp5.getTab("Household Size").getArrayValue()[0];
-       cp9.hide();
+       //cp9.hide();
     }
     else if (cp5.getTab("House Type").getId() == currentTab){
        cp5.getTab("House Type").bringToFront();
        tabCoordinates.x = cp5.getTab("House Type").getArrayValue()[0];
-       cp9.hide();
+       //cp9.hide();
     }
     else if (cp5.getTab("Industry").getId() == currentTab){
        cp5.getTab("Industry").bringToFront();
        tabCoordinates.x = cp5.getTab("Industry").getArrayValue()[0];
-       cp9.hide();
+       //cp9.hide();
     }
     else if (cp5.getTab("Heritage").getId() == currentTab){
        cp5.getTab("Heritage").bringToFront();
        tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
-       cp9.show();
+       //cp9.show();
     } 
   } 
 }

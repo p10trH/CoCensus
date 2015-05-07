@@ -89,7 +89,7 @@ public void initialize() {
   
   cp5 = new ControlP5(this); 
   cp6 = new ControlP5(this); 
-  cp10 = new ControlP5(this);
+  //cp10 = new ControlP5(this);
   
   background(windowBackground);
  
@@ -99,13 +99,14 @@ public void initialize() {
   householdSize();
   houseType();
   industry();
-  heritage();
-  nextButton();
+  //heritage();
+  heritageAlt();
+  //nextButton();
   startScreen();
   welcome();
   
   cp5.hide();
   cp7.hide();
-  cp9.hide();
+  //cp9.hide();
   ////////cp10.hide();
 }
