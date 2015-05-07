@@ -19,12 +19,12 @@ void controlEvent(ControlEvent theControlEvent) {
       //show/hide tabs within heritage
       if (cp5.getTab("Heritage").getId() == currentTab) {
 
-        if (aButtonPressed == 1) {
-
-          r.show();
-          h.show();
+        if (aButtonPressed == 1)
           a.show();
-        }
+        else if (aButtonPressed == 2)
+          r.show();
+        else if (aButtonPressed == 3)
+          h.show();
         //cp9.show();
       } else {
 

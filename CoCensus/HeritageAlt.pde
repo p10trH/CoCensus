@@ -87,7 +87,7 @@ public void heritageAlt() {
 
 
   r = cp20.addRadioButton("rRadioButton")
-    .setPosition(900, 150)
+    .setPosition(850, 200)
       //.setSize(defaultHouseImgs[0].width,defaultHouseImgs[0].height)
       .setItemsPerRow(3)
         .setSpacingColumn(210)
@@ -115,7 +115,7 @@ public void heritageAlt() {
     t.captionLabel().setFont(sfont);
   }  
   h = cp20.addRadioButton("hRadioButton")
-    .setPosition(900, 150)
+    .setPosition(850, 200)
       //.setSize(defaultHouseImgs[0].width,defaultHouseImgs[0].height)
       .setItemsPerRow(1)
         .setSpacingColumn(210)
@@ -143,7 +143,7 @@ public void heritageAlt() {
     t.captionLabel().setFont(sfont);
   }
   a = cp20.addRadioButton("aRadioButton")
-    .setPosition(900, 150)
+    .setPosition(850, 200)
       //.setSize(defaultHouseImgs[0].width,defaultHouseImgs[0].height)
       .setItemsPerRow(3)
         .setSpacingColumn(230)
@@ -193,9 +193,9 @@ public void Ancestry(int theValue) {
 
   cp5.getController("Hispanic").show();
 
-  cp5.getController("Race").setPosition(400, 120); //640
+  cp5.getController("Race").setPosition(300, 120); //640
 
-    cp5.getController("Hispanic").setPosition(400, 480);
+    cp5.getController("Hispanic").setPosition(300, 480);
 
   r.hide();
   h.hide();
@@ -205,7 +205,7 @@ public void Ancestry(int theValue) {
 
 public void Race(int theValue) {
 
-  aButtonPressed = 1;
+  aButtonPressed = 2;
 
   cp5.getController("Ancestry").show();
 
@@ -213,9 +213,9 @@ public void Race(int theValue) {
 
   cp5.getController("Hispanic").show();
 
-  cp5.getController("Ancestry").setPosition(400, 120);
+  cp5.getController("Ancestry").setPosition(300, 120);
 
-  cp5.getController("Hispanic").setPosition(400, 480);
+  cp5.getController("Hispanic").setPosition(300, 480);
 
 
   r.show();
@@ -226,7 +226,7 @@ public void Race(int theValue) {
 
 public void Hispanic(int theValue) {
 
-  aButtonPressed = 1;
+  aButtonPressed = 3;
 
   cp5.getController("Ancestry").show();
 
@@ -234,9 +234,9 @@ public void Hispanic(int theValue) {
 
   cp5.getController("Hispanic").hide();
 
-  cp5.getController("Ancestry").setPosition(400, 120);
+  cp5.getController("Ancestry").setPosition(300, 120);
 
-  cp5.getController("Race").setPosition(400, 480);
+  cp5.getController("Race").setPosition(300, 480);
 
   r.hide();
   h.show();

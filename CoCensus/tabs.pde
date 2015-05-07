@@ -278,13 +278,12 @@ public void left(int theValue) {
       cp5.getTab("Heritage").bringToFront();
       tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
       //cp9.show();
-
-      if (aButtonPressed == 1) {
-
-        r.show();
-        h.show();
+      if (aButtonPressed == 1)
         a.show();
-      }
+      else if (aButtonPressed == 2)
+        r.show();
+      else if (aButtonPressed == 3)
+        h.show();
     }
   }
 }
@@ -320,6 +319,12 @@ public void right(int theValue) {
       cp5.getTab("Heritage").bringToFront();
       tabCoordinates.x = cp5.getTab("Heritage").getArrayValue()[0];
 
+      if (aButtonPressed == 1)
+        a.show();
+      else if (aButtonPressed == 2)
+        r.show();
+      else if (aButtonPressed == 3)
+        h.show();
       //cp9.show();
     }
   }
@@ -339,6 +344,16 @@ class MyCanvas extends Canvas {
   public void draw(PApplet p) {
 
     p.image(tabImg, 0, tabPositionY);
+
+fill(100);
+
+    if (aButtonPressed == 1)
+      rect(800, 100, 900, 700);
+    else if (aButtonPressed == 2)
+      rect(800, 100, 900, 700);
+    else if (aButtonPressed == 3)
+      rect(800, 100, 900, 700);
+
 
     /*
     for (int i = 20; i <= 45; i++) {
